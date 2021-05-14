@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* 투썸 브라우저 지원버전: 크롬 20, 파이어폭스 15, 나머지 10브라우저부터 */
+@font-face{
+    font-family: NtSansKR;
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.eot");
+    src: local("Noto Sans KR"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.eot?#iefix") format("embeded-opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.woff2") format("woff2"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.woff") format("woff"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.otf") format("opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Regular.svg#NotoSansKR") format("svg");
+}
+@font-face {
+  font-family: NtSansKR;
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.eot");
+  src: local("Noto Sans KR"),
+      url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.eot?#iefix") format("embedded-opentype"),
+     url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.woff2") format("woff2"),
+     url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.woff") format("woff"),
+     url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.otf") format("opentype"),
+     url("../fonts/Noto_Sans_KR/NotoSansKR-Medium.svg#NotoSansKR") format('svg');
+}
+@font-face{
+    font-family: NtSansKR;
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.eot");
+    src: local("Noto Sans KR"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.eot?#iefix") format("embeded-opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.woff2") format("woff2"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.woff") format("woff"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.otf") format("opentype"),
+        url("../fonts/Noto_Sans_KR/NotoSansKR-Bold.svg#NotoSansKR") format("svg");
+}
+
+/* tag reset */
+body, h1, h2, h3, h4, h5, h6, p, ul{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6{font-size: 100%;}
+ul{list-style: none;}
+a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
+img{border: none;vertical-align: top;}
+address{font-style: normal;}
+header, nav, section, article, footer{display: block;}
+
+body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, sans-serif;font-weight: 400;font-size: 18px;color: #54565a;letter-spacing: normal;word-break: keep-all;}
+
+/* common class */
+.f_l{float: left;}
+.f_r{float: right;}
+.p_a{position: absolute;}
+.p_r{position: relative;}
+.d_f{display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;}
+.clearfix::after{content: "";clear: both;display: block;}
+.blind{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+.bdbox{-moz-box-sizing: border-box;box-sizing: border-box;}
+.inner{margin: 0 300px;}
+
+/* skip */
+#skip a{position: absolute;z-index: 1000;left: -9999px;top: 0;}
+#skip a:focus{left: 0;width: 100%;height: 40px;line-height: 40px;text-align: center;background: #fff;color: #54565a;font-weight: 700;}
+
+/* #header */
+#header{position: relative;background: #2b2b2b;color: #fff;border-bottom: 1px solid #888;height: 110px;}
+#header.active::before{content: "";position: absolute;top: 110px;left: 0;width: 100%;height: 175px;background: rgba(43, 43, 43, .9);}
+#header .inner{position: relative;}
+#header .logo, #header .util{position: absolute;top: 19px;}
+#header .logo{left: 0;}
+#header .logo a img{width: 73px;height: 73px;}
+#header .util{right: 0;color: #ccc;font-size: 14px;}
+#header .util li{position: relative;margin-left: 25px;height: 15px;line-height: 15px;}
+#header .util li + li::before{content: "";position: absolute;top: 0;left: -12px;width: 1px;height: 100%;background: #777;}
+
+#header .gnb_franchise{position: absolute;right: 0;top: 60px;height: 32px;line-height: 32px;text-align: center;}
+#gnb > ul{width: 720px;justify-content: space-around;}
+#gnb > ul > li{position: relative;background: blue;}
+#gnb ul li a{display: block;}
+#gnb > ul > li > a, #gnb > ul > li > a::after{-webkit-transition: all .2s;-moz-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
+#gnb > ul > li > a{position: relative;font-family: Roboto;font-size: 19px;letter-spacing: 3px;padding-bottom: 18px;}
+#gnb > ul > li:hover > a, #gnb > ul > li > a:focus, #gnb > ul > li.on > a{color: #ff0042;}
+#gnb > ul > li > a::after{content: "";position: absolute;left: 0;bottom: 1px;width: 0;height: 4px;background: #ff0042;}
+#gnb > ul > li:hover > a::after, #gnb > ul > li > a:focus::after, #gnb > ul > li.on > a::after{width: 100%;}
+
+#gnb ul li ul{position: absolute;top: 50px;left: 0;width: 100%;height: 175px;font-size: 16px;letter-spacing: 2px;color: rgba(255, 255, 255, .6);}
+#gnb ul li ul li{background: green;}
+#gnb ul li ul li:first-child{padding-top: 18px;}
+#gnb ul li ul li + li{padding-top: 10px;}
+#gnb ul li ul li:hover a, #gnb ul li ul li a:focus{color: #fff}
+
+#header .franchise{display: block;background: #54565a url("../images/common/franchise1.png") no-repeat 20px center;width: 140px;letter-spacing: 1.3px;font-size: 13px;text-align: right;border-radius: 10px;margin-left: 48px;padding-right: 20px;}
+
+/* #footer */
