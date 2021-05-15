@@ -45,6 +45,7 @@ a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 img{border: none;vertical-align: top;}
 address{font-style: normal;}
 table{border-spacing: 0;border-collapse: collapse;}
+th{font-weight: inherit;}
 header, nav, section, article, footer, aside{display: block;}
 
 body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, sans-serif;font-weight: 400;font-size: 18px;color: #54565a;letter-spacing: normal;word-break: keep-all;}
