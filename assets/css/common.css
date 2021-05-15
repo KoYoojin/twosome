@@ -38,13 +38,14 @@
 }
 
 /* tag reset */
-body, h1, h2, h3, h4, h5, h6, p, ul{margin: 0;padding: 0;}
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, th, td{margin: 0;padding: 0;}
 h1, h2, h3, h4, h5, h6{font-size: 100%;}
-ul{list-style: none;}
+ul, ol{list-style: none;}
 a:link, a:visited, a:hover, a:active{text-decoration: none;color: inherit;}
 img{border: none;vertical-align: top;}
 address{font-style: normal;}
-header, nav, section, article, footer{display: block;}
+table{border-spacing: 0;border-collapse: collapse;}
+header, nav, section, article, footer, aside{display: block;}
 
 body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, sans-serif;font-weight: 400;font-size: 18px;color: #54565a;letter-spacing: normal;word-break: keep-all;}
 
@@ -75,7 +76,7 @@ body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, s
 #header .util li + li::before{content: "";position: absolute;top: 0;left: -12px;width: 1px;height: 100%;background: #777;}
 
 #header .gnb_franchise{position: absolute;right: 0;top: 60px;height: 32px;line-height: 32px;text-align: center;}
-#gnb > ul{width: 720px;justify-content: space-around;}
+#gnb > ul{width: 720px;justify-content: space-around;background: violet;}
 #gnb > ul > li{position: relative;background: blue;}
 #gnb ul li a{display: block;}
 #gnb > ul > li > a, #gnb > ul > li > a::after{-webkit-transition: all .2s;-moz-transition: all .2s;-o-transition: all .2s;transition: all .2s;}
@@ -84,7 +85,8 @@ body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, s
 #gnb > ul > li > a::after{content: "";position: absolute;left: 0;bottom: 1px;width: 0;height: 4px;background: #ff0042;}
 #gnb > ul > li:hover > a::after, #gnb > ul > li > a:focus::after, #gnb > ul > li.on > a::after{width: 100%;}
 
-#gnb ul li ul{position: absolute;top: 50px;left: 0;width: 100%;height: 175px;font-size: 16px;letter-spacing: 2px;color: rgba(255, 255, 255, .6);}
+#gnb ul li ul{position: absolute;display: none;top: 50px;width: 100%;height: 175px;font-size: 16px;letter-spacing: 2px;color: rgba(255, 255, 255, .6);}
+#header.active #gnb ul li ul{display: block;}
 #gnb ul li ul li{background: green;}
 #gnb ul li ul li:first-child{padding-top: 18px;}
 #gnb ul li ul li + li{padding-top: 10px;}
