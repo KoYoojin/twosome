@@ -1,0 +1,24 @@
+@charset "utf-8";
+.tit_top{padding-top: 110px;}
+.tit{font-size: 34px;letter-spacing: 10px;font-weight: 700;text-align: center;background: pink;}
+
+#cnt1 .swiper-container{height: 100vh;}
+#cnt1 .swiper-container .swiper-slide{background: no-repeat center -110px;background-size: cover;}
+#cnt1 .swiper-container .slide1{background-image: url("../images/main/new_latte.jpg");}
+#cnt1 .swiper-container .slide2{background-image: url("../images/main/new_ade.jpg");}
+#cnt1 .swiper-container .slide3{background-image: url("../images/main/new_bingsu2.jpg");}
+
+/* #cnt1 .swiper-container .swiper-slide > *{position: absolute;} */
+#cnt1 .swiper-container .swiper-slide h3{font-weight: 500;font-size: 30px;letter-spacing: -0.3px;}
+
+.slide1 p{font-family: "Nanum Pen Script";font-size: 30px;line-height: 30px;letter-spacing: 0.75px;text-align: center;}
+.slide1 p:nth-of-type(1){color: #804024;top: 238px;left: 344px;}
+.slide1 p:nth-of-type(2){color: #9e640c;}
+.slide1 p:nth-of-type(3){color: #4a1414;}
+
+.slide2 p, .slide3 p{font-size: 20px;line-height: 32px;letter-spacing: -1.2px;}
+.slide2 p{color: #606060;}
+.slide2 p:nth-of-type(1){text-align: right;}
+
+.slide3 p:nth-of-type(1){color: #6f6f6f;}
+.slide3 p + p{color: #fff;text-align: center;}

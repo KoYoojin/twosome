@@ -12,20 +12,67 @@
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/sub_common.css">
     <link rel="stylesheet" href="../assets/css/sub2.css">
-    <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <script>
-        window.addEventListener('load', function () {
-            var circle = document.querySelector('.pagination circle').getTotalLength();
-            console.log(circle);
-        });
-    </script>
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/common.js"></script>
 </head>
 
 <body>
     <div id="skip">
         <a href="#container">본문 바로가기</a>
     </div>
-    <header id="header" class="bdbox"></header>
+    <header id="header" class="bdbox">
+        <div class="inner">
+            <h1 class="logo">
+                <a href="../index.html"><img src="../assets/images/common/logo.png" alt="투썸플레이스"></a>
+            </h1>
+            <ul class="util d_f">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">기업 및 단체 구매</a></li>
+            </ul>
+            <div class="gnb_franchise d_f">
+                <nav id="gnb">
+                    <h2 class="blind">주메뉴</h2>
+                    <ul class="d_f">
+                        <li>
+                            <a href="../story/coff_story.html">TWOSOME</a>
+                            <ul>
+                                <li><a href="../story/coff_story.html">투썸 히스토리</a></li>
+                                <li><a href="../story/coff_story.html">커피 스토리</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../menu/drink.html">MENU</a>
+                            <ul>
+                                <li><a href="../menu/drink.html">음료</a></li>
+                                <li><a href="../menu/drink.html">푸드</a></li>
+                                <li><a href="../menu/drink.html">상품</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../index.html">STORE</a>
+                            <ul>
+                                <li><a href="../index.html">국내</a></li>
+                                <li><a href="../index.html">해외</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="../index.html">MEMBERSHIP</a>
+                            <ul>
+                                <li><a href="../index.html">멤버십 안내</a></li>
+                                <li><a href="../index.html">제휴 카드</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="news.html">NEWS</a>
+                        </li>
+                    </ul>
+                </nav>
+                <a href="" class="franchise bdbox">창업설명회</a>
+            </div>
+        </div>
+    </header>
     <div id="container">
         <div class="title news">
             <h2>새소식</h2>
@@ -142,11 +189,7 @@
                         </tbody>
                     </table>
                     <div class="pagination d_f">
-                        <a href="" title="이전 페이지">
-                            <svg class="btn_pre">
-                                <circle cx="15" cy="15" r="14" /> <!--87.39775085449219 => 88-->
-                            </svg>
-                        </a>
+                        <a href="" title="이전 페이지"></a>
                         <ul class="d_f">
                             <li><a href="">1</a></li>
                             <li><a href="">2</a></li>
@@ -159,11 +202,7 @@
                             <li><a href="">9</a></li>
                             <li><a href="">10</a></li>
                         </ul>
-                        <a href="" title="다음 페이지">
-                            <svg class="btn_next">
-                                <circle cx="15" cy="15" r="14" />
-                            </svg>
-                        </a>
+                        <a href="" title="다음 페이지"></a>
                     </div>
                 </div>
             </section>
