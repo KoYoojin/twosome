@@ -18,38 +18,45 @@
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/common.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             /*full page 스크립트*/
             $('#container').fullpage({
                 navigation: true,
                 navigationPosition: 'right',
                 navigationTooltips: ['신메뉴', '플래그십 매장', '브랜드 필름', '투썸 소식', '푸터'],
-                afterRender: function() {
+                afterRender: function () {
                     $('.fp-tooltip').attr('aria-hidden', true);
                 }
             });
 
-            //methods
-            $.fn.fullpage.setAllowScrolling(false);
-
-
-
             /*swiper 스크립트*/
             const swiper = new Swiper('.swiper-container', {
-                // Optional parameters
                 direction: 'horizontal',
                 loop: true,
 
-                // If we need pagination
                 pagination: {
                     el: '.swiper-pagination',
+                    type: 'fraction',
                 },
 
-                // Navigation arrows
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
                 },
+
+                /* autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                }, */
+            });
+
+            $('.btn_stop').on('click', function () {
+                $(this).hide().siblings('button').show();
+                swiper.autoplay.stop();
+            });
+            $('.btn_play').on('click', function () {
+                $(this).hide().siblings('button').show();
+                swiper.autoplay.start();
             });
         });
     </script>
@@ -116,35 +123,41 @@
         <div id="container">
             <section class="section" id="cnt1">
                 <h2 class="blind">여름 시즌 신메뉴 출시</h2>
-                <div class="swiper-container">
+                <div class="swiper-container p_r">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide slide1 p_r">
-                            <strong class="blind">Espresso Sweet &apos;n Cool</strong>
-                            <h3>썸머 라떼 3종</h3>
-                            <p>아이스크림<br>카페라떼</p>
-                            <p>달고나<br>카페라떼</p>
-                            <p>커피젤리<br>카페라떼</p>
+                        <div class="swiper-slide slide1">
+                            <div class="blind">
+                                <strong>Espresso Sweet&apos;n Cool</strong>
+                                <h3>썸머 라떼 3종</h3>
+                                <p>아이스크림 카페라떼</p>
+                                <p>달고나 카페라떼</p>
+                                <p>커피젤리 카페라떼</p>
+                            </div>
                             <a href="menu/drink.html">보러가기</a>
                         </div>
                         <div class="swiper-slide slide2">
-                            <strong class="blind">Summer Chill Out</strong>
-                            <h3>썸머 에이드 2종</h3>
-                            <p>샤인머스켓<br>청포도 에이드</p>
-                            <p>히비스커스<br>시트러스 에이드</p>
+                            <div class="blind">
+                                <strong>Summer Chill Out</strong>
+                                <h3>썸머 에이드 2종</h3>
+                                <p>청포도 에이드</p>
+                                <p>시트러스 에이드</p>
+                            </div>
                             <a href="menu/drink.html">보러가기</a>
                         </div>
                         <div class="swiper-slide slide3">
-                            <strong class="blind">Meet Your Cool Spoon</strong>
-                            <h3>썸머 빙수 4종</h3>
-                            <p>망고 빙수</p>
-                            <p>오리지널<br>팥빙수</p>
-                            <p>요거 베리<br>케이크 빙수</p>
-                            <p>스페니쉬 라떼<br>케이크 빙수</p>
+                            <div class="blind">
+                                <strong>Meet Your Cool Spoon</strong>
+                                <h3>썸머 빙수 4종</h3>
+                                <p>망고 빙수</p>
+                                <p>오리지널 팥빙수</p>
+                                <p>요거 베리 케이크 빙수</p>
+                                <p>스페니쉬 라떼 케이크 빙수</p>
+                            </div>
                             <a href="menu/drink.html">보러가기</a>
                         </div>
                     </div>
-                    <div class="controller">
-                        <div class="swiper-pagination"></div>
+                    <div class="controller p_a">
+                        <div class="swiper-pagination p_a"></div>
                         <div class="swiper-button-prev">
                             <span class="blind">이전버튼</span>
                         </div>
@@ -160,46 +173,46 @@
                     </div>
                 </div>
             </section>
-            <section class="section inner" id="cnt2">
+            <section class="section" id="cnt2">
                 <h2 class="tit_top tit">플래그십 매장</h2>
-                <ul>
+                <ul class="inner d_f">
                     <li class="fade">
-                        <img src="assets/images/main/store_parkone.jpg" alt="" class="fade_down">
-                        <div class="fade_up">
+                        <div class="over_img p_r">
+                            <img src="assets/images/main/store_parkone.jpg" alt="" class="fade_down">
+                        </div>
+                        <div class="fade_up over">
                             <strong>&quot;Modern French Mood&quot;</strong>
                             <h3>여의도 파크원점</h3>
-                            <div class="over">
-                                <p>세련되고 유니크한 디자인 가득!<br>
-                                    여의도파크원점에서 인생샷 남기고<br>
-                                    감각적이고 우아한 무드를 경험해보세요</p>
-                                <a href="">매장 안내</a>
-                            </div>
+                            <p>세련되고 유니크한 디자인 가득!<br>
+                                여의도파크원점에서 인생샷 남기고<br>
+                                감각적이고 우아한 무드를 경험해보세요</p>
+                            <a href="">매장 안내</a>
                         </div>
                     </li>
-                    <li class="fade">
-                        <img src="assets/images/main/store_yeonsaero.jpg" alt="" class="fade_up">
-                        <div class="fade_down">
+                    <li class="fade p_r">
+                        <div class="over_img">
+                            <img src="assets/images/main/store_yeonsaero.jpg" alt="" class="fade_up">
+                        </div>
+                        <div class="fade_down over d_f">
                             <strong>&quot;친환경을 생각한 이야기가 있는 공간&quot;</strong>
                             <h3>신촌 연세로점</h3>
-                            <div class="over">
-                                <p>다양한 친환경 마감재와 인테리어를<br>
-                                    경험할 수 있는 신촌연세로점에서<br>
-                                    커피 한잔과 함께 힐링을 느껴보세요</p>
-                                <a href="">매장 안내</a>
-                            </div>
+                            <p>다양한 친환경 마감재와 인테리어를<br>
+                                경험할 수 있는 신촌연세로점에서<br>
+                                커피 한잔과 함께 힐링을 느껴보세요</p>
+                            <a href="">매장 안내</a>
                         </div>
                     </li>
                     <li class="fade">
-                        <img src="assets/images/main/store-nonhyun.jpg" alt="" class="fade_down">
-                        <div class="fade_up">
+                        <div class="over_img p_r">
+                            <img src="assets/images/main/store-nonhyun.jpg" alt="" class="fade_down">
+                        </div>
+                        <div class="fade_up over">
                             <strong>&quot;올데이 페어링 문화공간&quot;</strong>
                             <h3>신논현역점</h3>
-                            <div class="over">
-                                <p>투썸의 트렌디한 베이커리를 경험할 수 있는 공간!<br>
-                                    든든한 한 끼로 제격인 신선한 샌드위치는 물론<br>
-                                    유니크한 베이커리를 취향별로 골라보세요</p>
-                                <a href="">매장 안내</a>
-                            </div>
+                            <p>투썸의 트렌디한 베이커리를 경험할 수 있는 공간!<br>
+                                든든한 한 끼로 제격인 신선한 샌드위치는 물론<br>
+                                유니크한 베이커리를 취향별로 골라보세요</p>
+                            <a href="">매장 안내</a>
                         </div>
                     </li>
                 </ul>

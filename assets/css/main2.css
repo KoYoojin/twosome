@@ -15,16 +15,15 @@ section.section{height: 100vh;}
 
 /*#cnt1*/
 #cnt1 .swiper-container{height: 100vh;}
-#cnt1 .swiper-container .swiper-slide{position: relative;background: no-repeat center -110px;background-size: cover;}
+#cnt1 .swiper-container .swiper-slide{background: no-repeat center -110px;background-size: cover;}
 #cnt1 .swiper-container .slide1{background-image: url("../images/main/new_latte.jpg");}
 #cnt1 .swiper-container .slide2{background-image: url("../images/main/new_ade_Text2.jpg");}
 #cnt1 .swiper-container .slide3{background-image: url("../images/main/new_bingsu2.jpg");}
 
 /* #cnt1 .swiper-container .swiper-slide > *{position: absolute;} */
-#cnt1 .swiper-container .swiper-slide h3{position: absolute;color: #444;font-weight: 500;font-size: 30px;letter-spacing: -0.3px;} /*font-weight: 500;font-size: 30px;letter-spacing: -0.3px;*/
+#cnt1 .swiper-container .swiper-slide > *{position: absolute;}
+#cnt1 .swiper-container .swiper-slide h3{font-weight: 500;font-size: 1.5625vw;letter-spacing: -0.008vw;} /*font-weight: 500;font-size: 30px;letter-spacing: -0.3px;*/
 #cnt1 .swiper-container .swiper-slide a{font-size: 0.833vw;font-weight: 500;letter-spacing: 0.05vw;} /*font-size: 16px;font-weight: 500;letter-spacing: 0.96px;*/
-
-#cnt1 .swiper-container .slide2 h3{width: 100%;text-align: center;top: 295px;}
 
 /*#cnt1 .controller*/
 #cnt1 .controller{width: 225px;height: 56px;background: rgba(0, 0, 0, .5);left: 10vw;bottom: 150px;border-radius: 50px;z-index: 50;}
