@@ -1,11 +1,23 @@
 @charset "utf-8";
-.tit_top{padding-top: 110px;}
-.tit{font-size: 34px;letter-spacing: 10px;font-weight: 700;text-align: center;background: pink;}
+.tit_top{padding: 60px 0;}
+.tit{font-size: 24px;letter-spacing: 7.8px;text-align: center;background: pink;}
+section.section{height: 100vh;}
 
+/*fullpage 인디케이터 버튼(#fp-nav)*/
+#fp-nav.fp-right{right: 150px;}
+#fp-nav ul li:last-child{width: 1px;height: 1px;overflow: hidden;border: none;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+#fp-nav ul li + li{margin-top: 20px;}
+#fp-nav ul li a span, .fp-slidesNav ul li a span, #fp-nav ul li:hover a span{width: 6px;height: 6px;border: 2px solid #aaa;background: none;margin: -5px 0 0 -5px;}
+#fp-nav ul li a.active span, #fp-nav ul li:hover a.active span{width: 12px;height: 12px;background: #d60037;border: none;margin: -6px 0 0 -6px;}
+#fp-nav ul li:hover a span{border-color: #d60037;}
+#fp-nav ul li .fp-tooltip{padding: 0 10px;height: 22px;line-height: 22px;background: #d60037;color: #fff;font-family: NtSansKR;top: -5px;border-radius: 3px;margin-right: 3px;overflow: visible;}
+#fp-nav ul li:hover .fp-tooltip::after, #fp-nav.fp-show-active a.active + .fp-tooltip::after{content: "";position: absolute;right: -6px;top: 7px;border-left: 6px solid #d60037;border-top: 4px solid transparent;border-bottom: 4px solid transparent;}
+
+/*#cnt1*/
 #cnt1 .swiper-container{height: 100vh;}
 #cnt1 .swiper-container .swiper-slide{background: no-repeat center -110px;background-size: cover;}
 #cnt1 .swiper-container .slide1{background-image: url("../images/main/new_latte.jpg");}
-#cnt1 .swiper-container .slide2{background-image: url("../images/main/new_ade.jpg");}
+#cnt1 .swiper-container .slide2{background-image: url("../images/main/new_ade_Text2.jpg");}
 #cnt1 .swiper-container .slide3{background-image: url("../images/main/new_bingsu2.jpg");}
 
 /* #cnt1 .swiper-container .swiper-slide > *{position: absolute;} */
@@ -22,3 +34,34 @@
 
 .slide3 p:nth-of-type(1){color: #6f6f6f;}
 .slide3 p + p{color: #fff;text-align: center;}
+
+/*#cnt1 .controller*/
+#cnt1 .controller{width: 225px;height: 56px;background: rgba(0, 0, 0, .5);left: 10vw;bottom: 150px;border-radius: 50px;z-index: 50;}
+#cnt1 .controller .swiper-pagination{width: 60px;height: 100%;left: 57px;top: 0;line-height: 56px;font-size: 14px;font-weight: 300;text-align: center;color: #fff;}
+#cnt1 .controller .swiper-pagination .swiper-pagination-current{font-size: 20px;}
+#cnt1 .controller .swiper-button-next:after, #cnt1 .controller .swiper-button-prev:after{display: none;}
+#cnt1 .controller div + div{margin-top: 0;}
+#cnt1 .controller div + div, #cnt1 .controller button{position: absolute;width: 41px;height: 40px;top: 8px;background: url("../images/icon/pc-basic-large_h40.png") no-repeat;}
+#cnt1 .controller .swiper-button-prev{background-position-x: -262px;left: 10px;}
+#cnt1 .controller .swiper-button-next{background-position-x: -394px;right: 60px;}
+#cnt1 .controller .stop_play{right: 10px;}
+#cnt1 .controller .btn_play{display: none;background-position-x: -131px;}
+
+/*#cnt2*/
+#cnt2 ul{justify-content: space-around;text-align: center;}
+#cnt2 ul li{width: 340px;height: 560px;border: 1px solid purple;}
+#cnt2 ul li:nth-child(2), #cnt2 ul li:nth-child(2) div{flex-direction: column-reverse;}
+#cnt2 ul li img{position: relative;}
+#cnt2 ul li img::after{content: "";position: absolute;width: 100%;height: 100%;top: 0;left: 0;background: rgba(0, 0, 0, .7);}
+#cnt2 ul li:nth-child(2) img, #cnt2 ul li:nth-child(2) div{position: absolute;width: 340px;}
+#cnt2 ul li:nth-child(2) img{top: 99px;}
+#cnt2 ul li:nth-child(2) div{top: -283px;}
+#cnt2 ul li div{margin: 32px 0;}
+#cnt2 ul li div strong{display: block;font-size: 16px;color: #666;letter-spacing: 0.8px;font-weight: 400;}
+#cnt2 ul li div h3{color: #333;font-size: 34px;letter-spacing: 2.55px;padding: 18px 0;}
+#cnt2 ul li div p, #cnt2 ul li div a{color: #000;font-size: 14px;line-height: 26px;}
+#cnt2 ul li div p{position: relative;letter-spacing: -0.14px;margin: 58px 0;}
+#cnt2 ul li div p::after{content: "";position: absolute;width: 26px;height: 1px;background: #000;left: 157px;}
+#cnt2 ul li:nth-child(1) div p::after, #cnt2 ul li:nth-child(3) div p::after{top: -38px;}
+#cnt2 ul li:nth-child(2) div p::after{bottom: -38px;}
+#cnt2 ul li div a{display: block;width: 106px;height: 34px;line-height: 34px;font-weight: 500;border: 1px solid #000;border-radius: 20px;margin: 0 auto;}
