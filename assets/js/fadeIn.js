@@ -13,6 +13,13 @@ $(document).ready(function () {
         $(this).removeClass('on');
       }
     });
+    $('.fade_tit').each(function (idx) {
+      if (scrollY > $(this).offset().top) {
+        $(this).addClass('on');
+      } else { //반복적인 효과가 필요한 경우만 사용하기
+        $(this).removeClass('on');
+      }
+    });
   });
   
   $(window).trigger('scroll');

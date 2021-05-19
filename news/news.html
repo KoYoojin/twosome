@@ -14,6 +14,36 @@
     <link rel="stylesheet" href="../assets/css/sub2.css">
     <script src="../assets/js/jquery-1.12.4.min.js"></script>
     <script src="../assets/js/common.js"></script>
+    <script src="../assets/js/fadeIn.js"></script>
+    <script>
+        $(document).ready(function () {
+            //mouseover시 일어나는 effect	=> li:focus 대신 스크립트로 클래스 .on을 추가해 줍시다
+            var $hotnews = $(".hotnews3 li");
+            $hotnews.attr('tabindex', 0);
+
+            //li에 포커스가 가거나 마우스가 진입할 경우 클래스 추가, 포커스와 마우스가 나가면 처음으로 되돌리기
+            $hotnews.on({
+                'focusin mouseenter': function () {
+                    $(this).addClass("on");
+                },
+                'focusout mouseleave': function () {
+                    $(this).removeClass("on");
+                }
+            });
+
+            var $board = $(".board tbody tr td a");
+            $board.attr('tabindex', 0);
+
+            $board.on({
+                'focusin mouseenter': function () {
+                    $(this).parents('tr').addClass("on");
+                },
+                'focusout mouseleave': function () {
+                    $(this).parents('tr').removeClass("on");
+                }
+            });
+        });
+    </script>
 </head>
 
 <body>
@@ -75,8 +105,8 @@
     </header>
     <div id="container">
         <div class="title news">
-            <h2>새소식</h2>
-            <p>Twosome News</p>
+            <h2 class="fade_tit">새소식</h2>
+            <p class="fade_tit">Twosome News</p>
         </div>
         <div class="inner">
             <section id="cnt1">
@@ -92,16 +122,16 @@
                 </nav>
                 <h3>HOT NEWS</h3>
                 <ul class="hotnews3 d_f">
-                    <li tabindex="0">
+                    <li>
                         <img src="../assets/images/news/hotnews_iF.jpg" alt="iF디자인 어워드 2021 수상 - 패키지 부문 본상 2개 수상">
-                        <div><a href="" class="clearfix"><span>소식 보기</span></a></div>
+                        <div><a href=""><span>소식 보기</span></a></div>
                     </li>
-                    <li tabindex="0">
+                    <li>
                         <img src="../assets/images/news/hotnews_mask.jpg" alt="마스크 착용 안내문 코로나19 예방을 위하여 음료 및 음식 섭취 시를 제외하고는 매장 직원 및 방문 고객의 매장 내 마스크 착용을 의무화하고 있습니다. 또한 모두의 건강을 위해 다른 고객과의 사회적 거리두기를 실천해 주시기 바랍니다.">
                         <div><a href=""><span>소식 보기</span></a></div>
                     </li>
-                    <li tabindex="0">
-                        <img src="../assets/images/news/hotnews_TSstudioOpen.jpg" alt="투썸 스튜디오 OPEN 지금 바로 유튜브 채널 '투썸스튜디오' 구독하고 좋아요&알람설정까지!">
+                    <li>
+                        <img src="../assets/images/news/hotnews_TSstudioOpen.jpg" alt="투썸 스튜디오 OPEN 지금 바로 유튜브 채널 &apos;투썸스튜디오&apos; 구독하고 좋아요&amp;알람설정까지!">
                         <div><a href=""><span>소식 보기</span></a></div>
                     </li>
                 </ul>

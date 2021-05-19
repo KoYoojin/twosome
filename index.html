@@ -14,9 +14,10 @@
     <link rel="stylesheet" href="assets/css/common.css">
     <link rel="stylesheet" href="assets/css/main.css">
     <script src="assets/js/jquery-1.12.4.min.js"></script>
-    <!-- <script src="assets/js/fullpage.min.js"></script> -->
+    <script src="assets/js/fullpage.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/common.js"></script>
+    <script src="assets/js/mouseover.js"></script>
     <script>
         $(document).ready(function () {
             /*full page 스크립트*/
@@ -26,11 +27,18 @@
                 navigationTooltips: ['신메뉴', '플래그십 매장', '브랜드 필름', '투썸 소식', '푸터'],
                 afterRender: function () {
                     $('.fp-tooltip').attr('aria-hidden', true);
+                },
+                afterLoad: function (origin, destination, direction) { //본문을 불러오고 나서 스크롤이 끝나면 실행=> fade를 위해 추가됨
+                    if (destination.index == 1) { //도착지 인덱스 번호는 0부터 시작
+                        $('#cnt2').addClass('on');
+                    } else {
+                        $('#cnt2').removeClass('on');
+                    }
                 }
             });
 
-            /*swiper 스크립트*/
-            const swiper = new Swiper('.swiper-container', {
+            /*swiper 스크립트 , 본문 3에도 있으니까 이름은 swiper1로 수정합니다 */
+            const swiper1 = new Swiper('#cnt1 .swiper-container', {
                 direction: 'horizontal',
                 loop: true,
 
@@ -52,11 +60,24 @@
 
             $('.btn_stop').on('click', function () {
                 $(this).hide().siblings('button').show();
-                swiper.autoplay.stop();
+                swiper1.autoplay.stop();
             });
             $('.btn_play').on('click', function () {
                 $(this).hide().siblings('button').show();
-                swiper.autoplay.start();
+                swiper1.autoplay.start();
+            });
+            //mouseover시 일어나는 effect : 해당 본문이 보여지면 fade 효과 넣기 위해 fade 되는 대상에 .fade를 추가했어요
+            var $fade = $(".fade");
+            $fade.attr('tabindex', 0);
+
+            //li에 포커스가 가거나 마우스가 진입할 경우 클래스 추가, 포커스와 마우스가 나가면 처음으로 되돌리기
+            $fade.on({
+                'focusin mouseenter': function () {
+                    $(this).addClass("on");
+                },
+                'focusout mouseleave': function () {
+                    $(this).removeClass("on");
+                }
             });
         });
     </script>
@@ -182,7 +203,7 @@
             <section class="section" id="cnt2">
                 <h2 class="tit_top tit">플래그십 매장</h2>
                 <ul class="clearfix">
-                    <li class="store1">
+                    <li class="store1 fade">
                         <div class="store_name">
                             <strong>&quot;Modern French Mood&quot;</strong>
                             <h3>여의도 파크원점</h3>
@@ -196,7 +217,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="store2">
+                    <li class="store2 fade">
                         <div class="store_name">
                             <strong>&quot;친환경을 생각한 이야기가 있는 공간&quot;</strong>
                             <h3>신촌 연세로점</h3>
@@ -210,7 +231,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="store3">
+                    <li class="store3 fade">
                         <div class="store_name">
                             <strong>&quot;올데이 페어링 문화공간&quot;</strong>
                             <h3>신논현역점</h3>
