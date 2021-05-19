@@ -1,5 +1,21 @@
 @charset "utf-8";
-.tit_top{padding: 60px 0;}
+@-webkit-keyframes moveY {
+    0%{-webkit-transform: translateY(-5px);}
+    100%{-webkit-transform: translateY(0);}
+}
+@-moz-keyframes moveY {
+    0%{-moz-transform: translateY(-5px);}
+    100%{-moz-transform: translateY(0);}
+}
+@-o-keyframes moveY {
+    0%{-o-transform: translateY(-5px);}
+    100%{-o-transform: translateY(0);}
+}
+@keyframes moveY {
+    0%{transform: translateY(-5px);}
+    100%{transform: translateY(0);}
+}
+.tit_top{padding: 55px 0 50px;}
 .tit{font-size: 24px;letter-spacing: 7.8px;text-align: center;background: pink;}
 section.section{height: 100vh;}
 
@@ -20,10 +36,10 @@ section.section{height: 100vh;}
 #cnt1 .swiper-container .slide2{background-image: url("../images/main/new_ade_menuText3.jpg");}
 #cnt1 .swiper-container .slide3{background-image: url("../images/main/new_bingsu4.jpg");}
 
-#cnt1 .swiper-container .swiper-slide a{display: block;margin: 0 auto;font-size: 30px;font-weight: 500;text-align: right;color: #444;}
+#cnt1 .swiper-container .swiper-slide a{display: block;margin: 0 auto;font-size: 28px;font-weight: 500;text-align: right;color: #444;}
 #cnt1 .swiper-container .slide1 a{width: 1280px;margin-top: 320px;}
-#cnt1 .swiper-container .slide2 a{text-align: center;margin-top: 430px;}
-#cnt1 .swiper-container .slide3 a{width: 1100px;margin-top: 220px;}
+#cnt1 .swiper-container .slide2 a{text-align: center;margin-top: 470px;}
+#cnt1 .swiper-container .slide3 a{width: 1120px;margin-top: 255px;}
 
 /*#cnt1 .controller*/
 #cnt1 .controller{width: 225px;height: 56px;background: rgba(0, 0, 0, .5);left: 10vw;bottom: 150px;border-radius: 50px;z-index: 50;}
@@ -38,36 +54,28 @@ section.section{height: 100vh;}
 #cnt1 .controller .btn_play{display: none;background-position-x: -131px;}
 
 /*#cnt2*/
-#cnt2 ul{justify-content: space-around;}
-#cnt2 ul li{width: 340px;height: 560px;border: 1px solid purple;}
-#cnt2 ul li div:nth-child(2){position: relative;width: 100%;padding: 31px 0;text-align: center;}
-#cnt2 ul li div:nth-child(2).fade_down{flex-direction: column-reverse;}
-#cnt2 ul li:nth-child(2) > *{position: absolute;}
-/* #cnt2 ul li .over_hide{overflow: hidden;} */
-#cnt2 ul li:nth-child(2) .over_img{bottom: 0;}
-#cnt2 ul li .over_img::after{content: "";position: absolute;left: 0;width: 100%;height: 100%;background: rgba(0, 0, 0, .7);}
-#cnt2 ul li .over_img.p_r::after{top: 460px;}
-#cnt2 ul li:nth-child(2) .over_img::after{top: -460px;}
-#cnt2 ul li:nth-child(2) div:nth-child(2){top: -260px;}
+#cnt2 ul{width: 1200px;margin: 0 auto;text-align: center;}
+#cnt2 ul li{position: relative;float: left;width: 340px;height: 560px;background: no-repeat;}
+#cnt2 ul li + li{margin-left: 90px;}
+#cnt2 ul .store1{background-image: url("../images/main/store_parkone.jpg");}
+#cnt2 ul .store2{background-image: url("../images/main/store_yeonsaero.jpg");background-position-y: bottom;margin-top: 50px;}
+#cnt2 ul .store3{background-image: url("../images/main/store-nonhyun.jpg");}
+#cnt2 ul li .store_name{width: 100%;position: absolute;}
+#cnt2 ul li:nth-child(odd) .store_name{bottom: 0;}
 
-#cnt2 ul li .over strong{display: block;font-size: 16px;color: #666;letter-spacing: 0.8px;font-weight: 400;}
-#cnt2 ul li .over h3{color: #333;font-size: 34px;letter-spacing: 2.55px;padding: 16px 0;}
-#cnt2 ul li .over p, #cnt2 ul li .over a{color: #fff;font-size: 14px;}
-#cnt2 ul li .over p{position: relative;letter-spacing: -0.14px;line-height: 24px;margin: 52px 0;}
-#cnt2 ul li .over p::after{content: "";position: absolute;width: 26px;height: 1px;background: #fff;top: -34px;left: 157px;}
-#cnt2 ul li:nth-child(2) .over p::after{top: 106px;}
-#cnt2 ul li .over a{display: block;width: 108px;height: 36px;line-height: 34px;border: 1px solid #fff;border-radius: 20px;margin: 0 auto;-moz-box-sizing: border-box;box-sizing: border-box;}
+#cnt2 ul li .store_name strong{display: block;color: #666;font-size: 16px;letter-spacing: 0.8px;font-weight: 400;margin-bottom: 17px;}
+#cnt2 ul li .store_name h3{color: #333;font-size: 34px;letter-spacing: 2.55px;}
 
-/*#cnt2 mouse over: div(.over_img)에 마우스 오버 시 .on이라는 클래스 추가 필요(+focus 가능하도록 설정) => 스크립트 필요*/
-#cnt2 ul li .over_img.on::after{opacity: 1;top: 0;}
-#cnt2 ul li .over_img.on + .over{top: -416px;}
-#cnt2 ul li:nth-child(2) .over_img.on + .over{top: 160px;}
-#cnt2 ul li .over_img.on + .over strong, #cnt2 ul li .over_img.on + .over h3{color: #fff;}
-
-/*#cnt2 fade effect*/
-/* #cnt2 .fade .fade_down, #cnt2 .fade .fade_up{opacity: 0;}
-#cnt2 .fade .fade_down{-webkit-transform: translate(0, -100px);-moz-transform: translate(0, -100px);-o-transform: translate(0, -100px);transform: translate(0, -100px);}
-#cnt2 .fade .fade_up{-webkit-transform: translate(0, 100px);-moz-transform: translate(0, 100px);-o-transform: translate(0, 100px);transform: translate(0, 100px);}
-#cnt2 .fade.on .fade_down, #cnt2 .fade.on .fade_up{opacity: 1;-webkit-transform: translate(0, 0);-moz-transform: translate(0, 0);-o-transform: translate(0, 0);transform: translate(0, 0);}
-.delay_3{-webkit-transition-delay: 0.3s;-moz-transition-delay: 0.3s;-o-transition-delay: 0.3s;transition-delay: 0.3s;}
-.delay_6{-webkit-transition-delay: 0.6s;-moz-transition-delay: 0.6s;-o-transition-delay: 0.6s;transition-delay: 0.6s;} */
+#cnt2 ul li .over{position: absolute;width: 100%;height: 460px;color: #fff;}
+#cnt2 ul li:nth-child(2) .over{bottom: 0;}
+#cnt2 ul li .over .over_bg{width: 100%;height: 100%;background: rgba(0, 0, 0, .7);}
+#cnt2 ul li:nth-child(odd) .over .over_bg{margin-top: 460px;}
+#cnt2 ul li:nth-child(2) .over .over_bg{margin-top: -460px;}
+#cnt2 ul li .over p{position: relative;font-size: 14px;letter-spacing: -0.1px;line-height: 24px;padding: 195px 0 56px;}
+#cnt2 ul li .over p::before{content: "";position: absolute;top: 0;left: 0;width: 100%;height: 100%;background: no-repeat center 60px;background-size: 60px;-webkit-animation: moveY 1s cubic-bezier(0.35, 0.03, 0.62, 0.92) infinite alternate;-moz-animation: moveY 1s cubic-bezier(0.35, 0.03, 0.62, 0.92) infinite alternate;-o-animation: moveY 1s cubic-bezier(0.35, 0.03, 0.62, 0.92) infinite alternate;animation: moveY 1s cubic-bezier(0.35, 0.03, 0.62, 0.92) infinite alternate;}
+#cnt2 ul .store1 .over p::before{background-image: url("../images/main/flagship_icon_parkone.png");}
+#cnt2 ul .store2 .over p::before{background-image: url("../images/main/flagship_icon_yeonsaero.png");}
+#cnt2 ul .store3 .over p::before{background-image: url("../images/main/flagship_icon_nonhyun.png");}
+#cnt2 ul li .over p::after{content: "";position: absolute;width: 32px;height: 1px;background: #fff;left: 154px;top: 170px;}
+#cnt2 ul li .over a{display: block;width: 126px;height: 42px;line-height: 40px;border: 1px solid #fff;border-radius: 20px;margin: 0 auto;-moz-box-sizing: border-box;box-sizing: border-box;-webkit-transition: all 0.2s;-moz-transition: all 0.2s;-o-transition: all 0.2s;transition: all 0.2s;}
+#cnt2 ul li .over a:hover, #cnt2 ul li .over a:focus{color: #d60037;background: #fff;}
