@@ -31,8 +31,10 @@
                 afterLoad: function (origin, destination, direction) { //본문을 불러오고 나서 스크롤이 끝나면 실행=> fade를 위해 추가됨
                     if (destination.index == 1) { //도착지 인덱스 번호는 0부터 시작
                         $('#cnt2').addClass('on');
-                    } else {
-                        $('#cnt2').removeClass('on');
+                    } else if (destination.index == 3) {
+                        $('#cnt4').addClass('on');
+                    } else { //#cnt2와 #cnt4가 아니라면 .on을 지워라
+                        $('#cnt2, #cnt4').removeClass('on');
                     }
                 }
             });
@@ -156,7 +158,12 @@
                                     <li>커피젤리 카페라떼</li>
                                 </ul>
                             </div>
-                            <a href="menu/drink.html">View More</a>
+                            <div class="svg_wrap">
+                                <a href="menu/drink.html">View More</a>
+                                <svg>
+                                    <rect class="view_bd" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="swiper-slide slide2">
                             <div class="blind">
@@ -167,7 +174,12 @@
                                     <li>히비스커스 시트러스 에이드</li>
                                 </ul>
                             </div>
-                            <a href="menu/drink.html">View More</a>
+                            <div class="svg_wrap">
+                                <a href="menu/drink.html">View More</a>
+                                <svg>
+                                    <rect class="view_bd" />
+                                </svg>
+                            </div>
                         </div>
                         <div class="swiper-slide slide3">
                             <div class="blind">
@@ -180,7 +192,12 @@
                                     <li>스페니쉬 라떼 케이크 빙수</li>
                                 </ul>
                             </div>
-                            <a href="menu/drink.html">View More</a>
+                            <div class="svg_wrap">
+                                <a href="menu/drink.html">View More</a>
+                                <svg>
+                                    <rect class="view_bd" />
+                                </svg>
+                            </div>
                         </div>
                     </div>
                     <div class="controller p_a">

@@ -79,12 +79,12 @@ body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, s
 #skip a:focus{left: 0;width: 100%;height: 40px;line-height: 40px;text-align: center;background: #fff;color: #54565a;font-weight: 700;}
 
 /* #header */
-#header{position: relative;background: #2b2b2b;color: #fff;border-bottom: 1px solid #888;height: 110px;z-index: 500;}
+#header{position: fixed;width: 100%;background: #2b2b2b;color: #fff;border-bottom: 1px solid #888;height: 110px;z-index: 500;}
 #header::before{content: "";position: absolute;top: 110px;left: 0;width: 100%;height: 0;background: rgba(43, 43, 43, .9);-webkit-transition: height 0.6s;-moz-transition: height 0.6s;-o-transition: height 0.6s;transition: height 0.6s;}
 #header.active::before{height: 175px;}
 #header .inner{position: relative;}
 #header .logo, #header .util{position: absolute;top: 19px;}
-#header .logo{left: 0;background: pink;}
+#header .logo{left: 0;}
 #header .logo a img{width: 73px;height: 73px;}
 #header .util{right: 0;color: #ccc;font-size: 14px;}
 #header .util li{position: relative;margin-left: 25px;height: 15px;line-height: 15px;}
@@ -101,7 +101,6 @@ body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, s
 #gnb > ul > li:hover > a::after, #gnb > ul > li > a:focus::after, #gnb > ul > li.on > a::after{width: 100%;}
 
 #gnb ul li ul{top: 50px;width: 100%;height: 175px;font-size: 16px;letter-spacing: 2px;color: rgba(255, 255, 255, .6);}
-#header.active #gnb ul li ul{display: block;}
 #gnb ul li ul li:first-child{padding-top: 18px;}
 #gnb ul li ul li + li{padding-top: 10px;}
 #gnb ul li ul li:hover a, #gnb ul li ul li a:focus{color: #fff}

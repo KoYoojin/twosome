@@ -1,4 +1,20 @@
 @charset "utf-8";
+@-webkit-keyframes svg_bd {
+    0%{stroke-dasharray: 136 316;stroke-width: 5;stroke-dashoffset: -247;}
+    100%{stroke-dasharray: 452;stroke-width: 3;stroke-dashoffset: 0;}
+}
+@-moz-keyframes svg_bd {
+    0%{stroke-dasharray: 136 316;stroke-width: 5;stroke-dashoffset: -247;}
+    100%{stroke-dasharray: 452;stroke-width: 3;stroke-dashoffset: 0;}
+}
+@-o-keyframes svg_bd {
+    0%{stroke-dasharray: 136 316;stroke-width: 5;stroke-dashoffset: -247;}
+    100%{stroke-dasharray: 452;stroke-width: 3;stroke-dashoffset: 0;}
+}
+@keyframes svg_bd {
+    0%{stroke-dasharray: 136 316;stroke-width: 5;stroke-dashoffset: -247;}
+    100%{stroke-dasharray: 452;stroke-width: 3;stroke-dashoffset: 0;}
+}
 @-webkit-keyframes moveY {
     0%{-webkit-transform: translateY(-10px);}
     100%{-webkit-transform: translateY(0);}
@@ -15,9 +31,8 @@
     0%{transform: translateY(-10px);}
     100%{transform: translateY(0);}
 }
-.tit_top{padding: 55px 0 50px;background: pink;}
+.tit_top{padding: 55px 0 50px;}
 .tit{font-size: 24px;letter-spacing: 7.8px;text-align: center;}
-section.section{height: 100vh;}
 
 /*fullpage 인디케이터 버튼(#fp-nav)*/
 #fp-nav.fp-right{right: 150px;}
@@ -31,18 +46,28 @@ section.section{height: 100vh;}
 
 /*#cnt1*/
 #cnt1 .swiper-container{height: 100vh;}
-#cnt1 .swiper-container .swiper-slide{position: relative;background: no-repeat center -110px;background-size: cover;}
+#cnt1 .swiper-container .swiper-slide{position: relative;background: no-repeat center;background-size: cover;}
 #cnt1 .swiper-container .slide1{background-image: url("../images/main/new_latte_menuText.jpg");}
 #cnt1 .swiper-container .slide2{background-image: url("../images/main/new_ade_menuText3.jpg");}
 #cnt1 .swiper-container .slide3{background-image: url("../images/main/new_bingsu4.jpg");}
 
-#cnt1 .swiper-container .swiper-slide a{position: relative;display: inline-block;font-family: Roboto;font-size: 28px;font-weight: 700;color: transparent;padding: 10px 20px;-webkit-background-clip: text !important;background-clip: text !important;}
-#cnt1 .swiper-container .slide1 a{left: 74vw;top: 35vh;border-color: #5280bb;background: #5280bb;background: -moz-linear-gradient(-45deg, #5280bb 1%, #375886 47%, #884122 100%);background: -webkit-linear-gradient(-45deg, #5280bb 1%,#375886 47%,#884122 100%);background: linear-gradient(135deg, #5280bb 1%,#375886 47%,#884122 100%);}
-#cnt1 .swiper-container .slide2 a{left: 45vw;top: 49vh;border-color: #7f0000;background: #7f0000;background: -moz-linear-gradient(-45deg, #7f0000 0%, #d92908 47%, #519d36 100%);background: -webkit-linear-gradient(-45deg, #7f0000 0%, #d92908 47%, #519d36 100%);background: linear-gradient(135deg, #7f0000 0%, #d92908 47%, #519d36 100%);}
-#cnt1 .swiper-container .slide3 a{left: 70vw;top: 28vh;border-color: #444;background: #444;background: -moz-linear-gradient(-45deg, #1b65ae 0%, #0d3b69 50%, #444 100%);background: -webkit-linear-gradient(-45deg, #1b65ae 0%, #0d3b69 50%, #444 100%);background: linear-gradient(135deg, #1b65ae 0%, #0d3b69 50%, #444 100%);}
+#cnt1 .swiper-slide .svg_wrap, #cnt1 .swiper-slide .svg_wrap a, #cnt1 .swiper-slide .svg_wrap svg, #cnt1 .swiper-slide .svg_wrap svg .view_bd{width: 178px;height: 48px;}
+#cnt1 .swiper-slide .svg_wrap{position: relative;}
+#cnt1 .slide1 .svg_wrap{left: 74vw;top: 47vh;}
+#cnt1 .slide2 .svg_wrap{left: 45vw;top: 60vh;}
+#cnt1 .slide3 .svg_wrap{left: 70vw;top: 39vh;}
+#cnt1 .swiper-slide a{position: absolute;top: 0;left: 0;line-height: 48px;text-align: center;font-family: Roboto;font-size: 28px;font-weight: 700;color: transparent;-webkit-background-clip: text !important;background-clip: text !important;}
+#cnt1 .slide1 a{background: #375886;background: -moz-linear-gradient(-45deg, #5280bb 1%, #375886 47%, #884122 100%);background: -webkit-linear-gradient(-45deg, #5280bb 1%,#375886 47%,#884122 100%);background: linear-gradient(135deg, #5280bb 1%,#375886 47%,#884122 100%);}
+#cnt1 .slide2 a{background: #7f0000;background: -moz-linear-gradient(-45deg, #7f0000 0%, #d92908 47%, #519d36 100%);background: -webkit-linear-gradient(-45deg, #7f0000 0%, #d92908 47%, #519d36 100%);background: linear-gradient(135deg, #7f0000 0%, #d92908 47%, #519d36 100%);}
+#cnt1 .slide3 a{background: #444;background: -moz-linear-gradient(-45deg, #1b65ae 0%, #0d3b69 50%, #444 100%);background: -webkit-linear-gradient(-45deg, #1b65ae 0%, #0d3b69 50%, #444 100%);background: linear-gradient(135deg, #1b65ae 0%, #0d3b69 50%, #444 100%);}
+#cnt1 .swiper-slide .svg_wrap svg .view_bd{fill: none;stroke-dasharray: 136 316;stroke-width: 5;stroke-dashoffset: -247;}
+#cnt1 .slide1 .svg_wrap svg .view_bd{stroke: #375886;}
+#cnt1 .slide2 .svg_wrap svg .view_bd{stroke: #d92908;}
+#cnt1 .slide3 .svg_wrap svg .view_bd{stroke: #0d3b69;}
+#cnt1 .svg_wrap:hover svg .view_bd, #cnt1 .svg_wrap a:focus + svg .view_bd{-webkit-animation: svg_bd .5s 1 forwards;-moz-animation: svg_bd .5s 1 forwards;-o-animation: svg_bd .5s 1 forwards;animation: svg_bd .5s 1 forwards;}
 
 /*#cnt1 .controller*/
-#cnt1 .controller{width: 225px;height: 56px;background: rgba(0, 0, 0, .5);left: 10vw;bottom: 150px;border-radius: 50px;z-index: 50;}
+#cnt1 .controller{width: 225px;height: 56px;background: rgba(0, 0, 0, .5);left: 10vw;bottom: 50px;border-radius: 50px;z-index: 50;}
 #cnt1 .controller .swiper-pagination{width: 60px;height: 100%;left: 57px;top: 0;line-height: 56px;font-size: 14px;font-weight: 300;text-align: center;color: #fff;}
 #cnt1 .controller .swiper-pagination .swiper-pagination-current{font-size: 20px;}
 #cnt1 .controller .swiper-button-next:after, #cnt1 .controller .swiper-button-prev:after{display: none;}
@@ -71,7 +96,7 @@ section.section{height: 100vh;}
 #cnt2 ul li:nth-child(odd) .store_name{bottom: 0;}
 #cnt2 ul li .store_name strong{display: block;color: #666;font-size: 16px;letter-spacing: 0.8px;font-weight: 400;margin-bottom: 17px;}
 #cnt2 ul li .store_name h3{color: #333;font-size: 34px;letter-spacing: 2.55px;}
-#cnt2 ul li .over{position: absolute;width: 100%;height: 460px;color: #fff;overflow: hidden;}
+#cnt2 ul li .over{position: absolute;width: 100%;height: 460px;color: #fff;overflow: hidden;box-shadow: 2px 3px 6px rgba(128, 128, 128, .3);}
 #cnt2 ul li:nth-child(2) .over{bottom: 0;}
 #cnt2 ul li .over .over_bg{width: 100%;height: 100%;background: rgba(0, 0, 0, .7);-webkit-transition: margin-top .5s;-moz-transition: margin-top .5s;-o-transition: margin-top .5s;transition: margin-top .5s;}
 #cnt2 ul li:nth-child(odd) .over .over_bg{margin-top: 460px;}
