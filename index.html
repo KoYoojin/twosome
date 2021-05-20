@@ -115,6 +115,16 @@
 
             var sizeSvg_r = document.querySelector('.svg_r').getTotalLength();
             console.log(sizeSvg_r); //118.61123657226562 => 119
+
+            var $cnt4_imgBlink = $("#cnt4 ul li a");
+        	$cnt4_imgBlink.on({
+		     'focusin mouseenter' : function () {
+			    $(this).parents("li").addClass("img_blink");
+	    	    },
+		      'focusout mouseleave' : function () {
+		    	$(this).parents("li").removeClass("img_blink");
+	        	}
+        	}); 
         });
     </script>
 </head>
@@ -323,11 +333,11 @@
                             </div>
                             <div class="swiper-slide slide2">
                                 <iframe id="ytplayer" type="text/html" width="947" height="504"
-                                src="https://www.youtube.com/embed/1QVlgGcNPs0?list=PLwJ9QcOjxfAPeI0IYUCrW2zqtklT8jWQZ" title="투썸 원두 비밀.. 여러분들에게만 알려드립니다｜원두편｜만든자" allowfullscreen></iframe>
+                                src="https://www.youtube.com/embed/pGyJ0PMfK9E?list=PLwJ9QcOjxfAM4JuaT66afDYiCDF_MGEYZ" title="[투썸플레이스] 열정 가득한 일상에 활기를 더하는 방법" allowfullscreen></iframe>
                             </div>
                             <div class="swiper-slide slide3">
                                 <iframe id="ytplayer" type="text/html" width="947" height="504"
-                                src="https://www.youtube.com/embed/pGyJ0PMfK9E?list=PLwJ9QcOjxfAM4JuaT66afDYiCDF_MGEYZ" title="[투썸플레이스] 열정 가득한 일상에 활기를 더하는 방법" allowfullscreen></iframe>
+                                src="https://www.youtube.com/embed/1QVlgGcNPs0?list=PLwJ9QcOjxfAPeI0IYUCrW2zqtklT8jWQZ" title="투썸 원두 비밀.. 여러분들에게만 알려드립니다｜원두편｜만든자" allowfullscreen></iframe>
                             </div>
                         </div>
 

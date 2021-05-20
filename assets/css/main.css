@@ -47,6 +47,22 @@
     0%{transform: translateY(-10px);}
     100%{transform: translateY(0);}
 }
+@-webkit-keyframes img_blink {
+    0%{opacity: 1;}
+    100%{opacity: .7;}
+}
+@-moz-keyframes img_blink {
+    0%{opacity: 1;}
+    100%{opacity: .7;}
+}
+@-o-keyframes img_blink {
+    0%{opacity: 1;}
+    100%{opacity: .7;}
+}
+@keyframes img_blink {
+    0%{opacity: 1;}
+    100%{opacity: .7;}
+}
 
 .tit_top{padding-top: 90px;}
 .tit{font-size: 24px;letter-spacing: 7.8px;text-align: center;}
@@ -183,6 +199,8 @@
 #cnt4 ul .tit2 h2::after{background: url("../images/main/article-4-event.jpg");}
 #cnt4 ul .tit3 h2::after{background: url("../images/main/article-4-open.jpg");}
 #cnt4 ul .tit4 h2::after{background: url("../images/main/article-4-mobile.jpg");width: 48px;}
+#cnt4 ul li.img_blink h2::after{-webkit-animation: img_blink .6s linear 4 alternate backwards;-moz-animation: img_blink .6s linear 4 alternate backwards;-o-animation: img_blink .6s linear 4 alternate backwards;animation: img_blink .6s linear 4 alternate backwards;}
+
 #cnt4 ul li .top p{position: relative;margin: 20px 0 56px 0;color: #555;line-height: 26px;letter-spacing: -0.18px; /* background: white; */}
 #cnt4 ul li .top p::after{content: "";position: absolute;width: 30px;height: 1px;bottom: -28px;left: 0;background: #aaa;}
 #cnt4 ul li .bottom img, #cnt4 ul li .bottom .over{width: 227px;height: 227px;border-radius: 15px;}
