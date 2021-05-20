@@ -146,7 +146,7 @@
 #cnt3 .swiper-container{overflow: visible;}
 
 #cnt3 .swiper-wrapper{height: 504px;} /* 영상 높이 만큼으로 줄여주세요 */
-#cnt3 .swiper-slide{border-radius: 60px;overflow: hidden;} /* 둥근 모서리 지정하고 overflow:hidden으로 숨기면 포토샵 디자인 처럼 되요 */
+#cnt3 .swiper-slide{border-radius: 60px;overflow: hidden;box-shadow: 1px 2px 8px rgba(0, 0, 0, .3);} /* 둥근 모서리 지정하고 overflow:hidden으로 숨기면 포토샵 디자인 처럼 되요 */
 
 /* 2) 이전다음버튼 */
 #cnt3 .prev_next{width: 29px;height: 43px;}
