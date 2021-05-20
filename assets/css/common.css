@@ -124,7 +124,7 @@ body{font-family: NtSansKR, "맑은 고딕", "Malgun Gothic", "돋움", Dotum, s
 .foot_inner .sns_right li img:nth-child(1){width: 29px;height: 24px;}
 .foot_inner .sns_right li img:nth-child(2){width: 26px;height: 21px;}
 .foot_inner .sns_right li img:nth-child(3){width: 26px;height: 20px;}
-.foot_inner .sns_right li img:nth-child(4){width: 32px;height: 32px;}
+.foot_inner .sns_right li img:nth-child(4){width: 24px;height: 24px;}
 .foot_inner .sns_right li a:hover, .foot_inner .sns_right li a:focus{border: 2px solid #d60037;}
 
 .foot_inner .foot_link, .foot_inner .address{font-size: 14px;font-weight: 300;}

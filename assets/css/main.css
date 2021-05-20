@@ -164,7 +164,7 @@
 /* 4) 정지실행버튼 */
 #cnt3 .controller .stop_play{position: absolute;right: 0;width: 14px;height: 17px;}
 #cnt3 .controller .btn_stop{background: url("../images/main/brandfilm-stop.png");}
-#cnt3 .controller .btn_play{background: url("../images/main/sec3_play-solid.svg");display: none;}
+#cnt3 .controller .btn_play{background: url("../images/main/sec3_play-solid.svg") no-repeat;display: none;}
 
 /* #cnt4 */
 #cnt4 .info{padding-top: 180px;}
