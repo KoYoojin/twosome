@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> NEWS </title>
     <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script:regular" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700" rel="stylesheet">
     <link rel="stylesheet" href="../assets/css/common.css">
     <link rel="stylesheet" href="../assets/css/sub_common.css">
@@ -17,11 +16,9 @@
     <script src="../assets/js/fadeIn.js"></script>
     <script>
         $(document).ready(function () {
-            //mouseover시 일어나는 effect	=> li:focus 대신 스크립트로 클래스 .on을 추가해 줍시다
             var $hotnews = $(".hotnews3 li");
             $hotnews.attr('tabindex', 0);
 
-            //li에 포커스가 가거나 마우스가 진입할 경우 클래스 추가, 포커스와 마우스가 나가면 처음으로 되돌리기
             $hotnews.on({
                 'focusin mouseenter': function () {
                     $(this).addClass("on");
@@ -255,7 +252,43 @@
             </div>
         </aside>
     </div>
-    <footer id="footer"></footer>
+    <footer id="footer">
+        <div class="foot_inner">
+            <ul class="contact d_f">
+                <li><img src="../assets/images/common/footer_headset-solid.svg" alt="고객센터">1577-4410</li>
+                <li><img src="../assets/images/common/footer_fax.svg" alt="팩스">02-2058-6777</li>
+                <li><img src="../assets/images/common/footer_envelope.svg" alt="대표이메일"><a href="">helpmaster@twosome.co.kr</a></li>
+            </ul>
+            <ul class="sns_right d_f">
+                <li><a href="https://www.facebook.com/ATWOSOMEPLACE" target="_blank"><img src="../assets/images/common/footer_facebook-f-brands.svg" alt="페이스북"></a></li>
+                <li><a href="https://www.instagram.com/official_atwosomeplace/" target="_blank"><img src="../assets/images/common/footer_instagram-brands.svg" alt="인스타그램"></a></li>
+                <li><a href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q" target="_blank"><img src="../assets/images/common/footer_youtube-brands.svg" alt="유튜브"></a></li>
+                <li><a href="https://play.google.com/store/apps/details?id=com.cj.twosome" target="_blank"><img src="../assets/images/common/footer_sns-app.png" alt="APP"></a></li>
+            </ul>
+            <ul class="foot_link d_f">
+                <li><a href="">사이트맵</a></li>
+                <li><a href="">리크루트</a></li>
+                <li><a href="">이용약관</a></li>
+                <li><a href="">개인정보처리방침</a></li>
+                <li><a href="">위치기반서비스 이용약관</a></li>
+                <li><a href="">이메일 무단수집거부</a></li>
+                <li><a href="">법적고지</a></li>
+            </ul>
+            <div class="address">
+                <address>
+                    <span>서울특별시 중구 을지로 170, 8층(을지로4가, 을지로트윈타워) 투썸플레이스(주)</span>
+                    <span>대표이사 : 이영상</span>
+                    <span>개인정보보호책임자 : 장재호</span>
+                    <span>사업자등록번호 : 404-86-01054</span>
+                </address>
+                <p>
+                    <span>통신판매업종신고증 : 제 2018-서울중구-0353호</span>
+                    <span>Copyright ⓒ 2020 A TWOSOME PLACE CO. LTD. ALL RIGHTS RESERVED.</span>
+                </p>
+            </div>
+            <a href="#header" class="btn_top">TOP</a>
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> 커피스토리 - TWOSOME </title>
-  <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:200,300,regular,500,600,700,900" rel="stylesheet">  
-  <link rel="stylesheet" href="../assets/css/sub1.css">
-  <link rel="stylesheet" href="../assets/css/sub_common.css">
-  <link rel="stylesheet" href="../assets/css/common.css">
-  <script src="../assets/js/jquery-1.12.4.min.js"></script>
-  <script src="../assets/js/tab.js"></script>
-  <script src="../assets/js/fadeIn.js"></script>  
-  <script src="../assets/js/common.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 커피스토리 - TWOSOME </title>
+    <link rel="icon" href="../assets/images/favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Serif+KR:200,300,regular,500,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/swiper-bundleCS.css">
+    <link rel="stylesheet" href="../assets/css/sub_common.css">
+    <link rel="stylesheet" href="../assets/css/sub1.css">
+    <script src="../assets/js/jquery-1.12.4.min.js"></script>
+    <script src="../assets/js/swiper-bundle.min.js"></script>
+    <script src="../assets/js/tab.js"></script>
+    <script src="../assets/js/fadeIn.js"></script>
+    <script src="../assets/js/common.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            const swiper = new Swiper('.swiper-container', {
+                // Optional parameters
+                direction: 'horizontal',
+                loop: false,
+
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                slidesPerView: 1, //한 화면에 보여지는 슬라이더 개수
+                spaceBetween: 200, //슬라이더 사이 공백
+            });
+        });
+
+
+        
+    </script>
 
 
 </head>
+
 <body>
-    <div class="skip">
+    <div id="skip">
         <a href="#content">본문 바로가기</a>
     </div>
     <div id="wrap">
@@ -100,14 +125,14 @@
                         로스팅 포인트와<br>
                         최상의 에스프레소 추출기술이 더해져
                     </p>
-                    <div class="txt_right fade">
+                    <div class="txt_right fade_left delay-7">
                         <p class="fade_left">오늘도</p>
-                        <p class="fade_left delay-3">가장 맛있는 커피가</p>
-                        <p class="fade_left delay-6">완성됩니다.</p>
+                        <p class="fade_left">가장 맛있는 커피가</p>
+                        <p class="fade_left">완성됩니다.</p>
                     </div>
                     <div class="fade">
-                        <img src="../assets/images/story/coffStory_sec2_01.jpg" alt="" class="fade_right">
-                        <img src="../assets/images/story/coffStory_sec2_02.jpg" alt="" class="fade_right">
+                        <img src="../assets/images/story/coffStory_sec2_01.jpg" alt="" class="fade_right delay-7">
+                        <img src="../assets/images/story/coffStory_sec2_02.jpg" alt="" class="fade_right delay-7">
                         <img src="../assets/images/story/coffStory_sec2_03.jpg" alt="" class="fade_left">
                     </div>
                 </div>
@@ -115,137 +140,163 @@
             <article class="blend">
                 <div class="sub_tit">
                     <h3>투썸만의</h3>
-                    <h3>TWO  SOME  BLEND</h3>
+                    <h3>TWO SOME BLEND</h3>
                 </div>
                 <div class="bg_gray"></div>
                 <div class="area">
                     <p class="bg_txt fade">
                         <span class="fade_up">맛의 시작, 원두부터 직접</span>
-                        <span class="choice fade_up delay-3">초</span><span class="choice fade_up delay-5">이</span><span class="choice fade_up delay-7">스</span>
+                        <span class="choice fade_up delay-3">초</span><span class="choice fade_up delay-5">이</span><span
+                            class="choice fade_up delay-7">스</span>
                         <span class="fade_up delay-7">하세요</span>
                     </p>
-                    <div id="subTab">
-                        <ul role="tablist" aria-label="투썸 두가지 블랜드">
-                            <li role="tab" aria-controls="tabpanel1" id="tab1" class="tab first">BLACK<br>
-                                GROUND</li>
-                            <li role="tab" aria-controls="tabpanel2" id="tab2" class="tab last">AROMA<br>
-                                    NOTE</li>
-                        </ul>
-                        <span aria-hidden="true">01</span>
-                        <span aria-hidden="true">02</span>
-                        <div role="tabpanel" aria-labelledby="tab1" id="tabpanel1" class="tabpanel">
-                            <p class="origin">
-                                <span>#콜롬비아</span>
-                                <span>#브라질</span>
-                                <span>#에티오피아</span>
-                                <span>#과테말라</span>
-                            </p>
-                            <p class="tab_tit">
-                                <span>BLACK GROUND</span>
-                                <span>블랙그라운드</span>
-                            </p>
-                            <p class="quot d_f">
-                                <span>&quot;</span>
-                                <span>&quot;</span>
-                            </p>
-                            <h4>묵직하고 스모키한 첫인상과 달콤 쌉싸름한 여운이 매력적인<br>
-                                다크로스팅 블렌드
-                            </h4>
-                            <div class="bean d_f">
-                                <div class="bk_left">
-                                    <p class="yellow">블랙그라운드 원두 평가</p>
-                                    <p>
-                                        <span>산미</span>
-                                        <img src="../assets/images/icon/bean.png" alt="20%">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                    </p>
-                                    <p>
-                                        <span>바디</span>
-                                        <img src="../assets/images/icon/bean.png" alt="50%">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                    </p>
+
+                    <div class="wrap">
+                        <div class="swiper-container">
+                            <!-- Additional required wrapper 슬라이더 본문 그룹 -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide slide1">
+                                    <div class="tabpanel tabpanel1">
+                                        <p class="origin">
+                                            <span>#콜롬비아</span>
+                                            <span>#브라질</span>
+                                            <span>#에티오피아</span>
+                                            <span>#과테말라</span>
+                                        </p>
+                                        <p class="tab_tit">
+                                            <span>BLACK GROUND</span>
+                                            <span>블랙그라운드</span>
+                                        </p>
+                                        <p class="quot d_f">
+                                            <span>&quot;</span>
+                                            <span>&quot;</span>
+                                        </p>
+                                        <h4>묵직하고 스모키한 첫인상과 달콤 쌉싸름한 여운이 매력적인<br>
+                                            다크로스팅 블렌드
+                                        </h4>
+                                        <div class="bean d_f">
+                                            <div class="bk_left">
+                                                <p class="yellow">블랙그라운드 원두 평가</p>
+                                                <p>
+                                                    <span>산미</span>
+                                                    <span class="number" aria-label="20%">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                    </span>
+                                                </p>
+                                                <p>
+                                                    <span>바디</span>
+                                                    <span class="number" aria-label="50%">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="bk_right">
+                                                <p class="yellow">블랙그라운드 원두 향미</p>
+                                                <div class="p_l">
+                                                    <p>> Full-body</p>
+                                                    <p>> Nutty</p>
+                                                    <p>> Chocolate</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="recom">나를 둘러싼 주변 소음으로부터 잠시 떨어져 깊은 사색과<br>
+                                            여유를 즐기고 싶은 분들에게 '블랙그라운드'를 추천드립니다.</p>
+                                    </div>
                                 </div>
-                                <div class="bk_right">
-                                    <p class="yellow">블랙그라운드 원두 향미</p>
-                                    <div class="p_l">
-                                        <p>> Full-body</p>
-                                        <p>> Nutty</p>
-                                        <p>> Chocolate</p>
+                                <div class="swiper-slide slide2">
+                                    <div class="tabpanel tabpanel2">
+                                        <p class="origin">
+                                            <span>#콜롬비아</span>
+                                            <span>#브라질</span>
+                                            <span>#에티오피아</span>
+                                            <span>#과테말라</span>
+                                        </p>
+                                        <p class="tab_tit">
+                                            <span>BLACK GROUND</span>
+                                            <span>블랙그라운드</span>
+                                        </p>
+                                        <p class="quot d_f">
+                                            <span>&quot;</span>
+                                            <span>&quot;</span>
+                                        </p>
+                                        <h4>묵직하고 스모키한 첫인상과 달콤 쌉싸름한 여운이 매력적인<br>
+                                            다크로스팅 블렌드
+                                        </h4>
+                                        <div class="bean d_f">
+                                            <div class="bk_left">
+                                                <p class="yellow">블랙그라운드 원두 평가</p>
+                                                <p>
+                                                    <span>산미</span>
+                                                    <span class="number" aria-label="20%">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                    </span>
+                                                </p>
+                                                <p>
+                                                    <span>바디</span>
+                                                    <span class="number" aria-label="50%">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                        <img src="../assets/images/icon/bean.png" alt="">
+                                                    </span>
+                                                </p>
+                                            </div>
+                                            <div class="bk_right">
+                                                <p class="yellow">블랙그라운드 원두 향미</p>
+                                                <div class="p_l">
+                                                    <p>> Full-body</p>
+                                                    <p>> Nutty</p>
+                                                    <p>> Chocolate</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <p class="recom">나를 둘러싼 주변 소음으로부터 잠시 떨어져 깊은 사색과<br>
+                                            여유를 즐기고 싶은 분들에게 '블랙그라운드'를 추천드립니다.</p>
                                     </div>
                                 </div>
                             </div>
-                            <p class="recom">나를 둘러싼 주변 소음으로부터 잠시 떨어져 깊은 사색과<br>
-                                여유를 즐기고 싶은 분들에게 '블랙그라운드'를 추천드립니다</p>
-                        </div>
-                        <div role="tabpanel" aria-labelledby="tab2" id="tabpanel2" class="tabpanel">
-                            <p class="origin">
-                                <span>#콜롬비아</span>
-                                <span>#브라질</span>
-                                <span>#에티오피아</span>
-                            </p>
-                            <p class="tab_tit">
-                                <span>AROMA NOTE</span>
-                                <span>아로마노트</span>
-                            </p>
-                            <p class="quot2 d_f">
-                                <span>&quot;</span>
-                                <span>&quot;</span>
-                            </p>
-                            <h4>플로럴한 화사함과 열대과일의 새콤달콤함에<br>
-                                부드러운 바디감이 조화롭게 어우러져<br>
-                                누구나 기분 좋게 즐길 수 있는 스페셜티 커피
-                            </h4>
-                            <div class="bean d_f">
-                                <div class="bk_left">
-                                    <p class="yellow">아로마노트 원두 평가</p>
-                                    <p>
-                                        <span>산미</span>
-                                        <img src="../assets/images/icon/bean.png" alt="40%">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                    </p>
-                                    <p>
-                                        <span>바디</span>
-                                        <img src="../assets/images/icon/bean.png" alt="30%">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                        <img src="../assets/images/icon/bean.png" alt="">
-                                    </p>
-                                </div>
-                                <div class="bk_right">
-                                    <p class="yellow">아로마노트 원두 향미</p>
-                                    <div class="p_l">
-                                        <p>> Berry-like</p>
-                                        <p>> Juicy</p>
-                                        <p>> Floral</p>
-                                    </div>
-                                </div>
+                            <div class="swiper-button-prev prev_next">
+                                <p>BLACK<br>
+                                    GROUND</p>
                             </div>
-                            <p class="recom">꽃잎을 품은 산들바람처럼 가볍고 산뜻한 커피로 지금의 기분을 남기고 싶다면,<br>
-                                한 모금 머금는 순간 입가에 잔잔한 미소를 띄우게 될 '아로마노트'를 추천드립니다</p>
+                            <div class="swiper-button-next prev_next">
+                                <p>AROMA<br>
+                                    NOTE</p>
+                            </div>
                         </div>
                     </div>
-                    <a href="../menu/drink.html" target="_blank">more</a>
+
+                    <a href="../menu/drink.html" target="_blank" class="more">more</a>
                 </div>
             </article>
-        
+
         </section>
-        
+
         <footer id="footer">
             <div class="foot_inner">
                 <ul class="contact d_f">
                     <li><img src="../assets/images/common/footer_headset-solid.svg" alt="고객센터">1577-4410</li>
                     <li><img src="../assets/images/common/footer_fax.svg" alt="팩스">02-2058-6777</li>
-                    <li><img src="../assets/images/common/footer_envelope.svg" alt="대표이메일"><a href="">helpmaster@twosome.co.kr</a></li>
+                    <li><img src="../assets/images/common/footer_envelope.svg" alt="대표이메일"><a
+                            href="">helpmaster@twosome.co.kr</a></li>
                 </ul>
                 <ul class="sns_right d_f">
-                    <li><a href="https://www.facebook.com/ATWOSOMEPLACE" target="_blank"><img src="../assets/images/common/footer_facebook-f-brands.svg" alt="페이스북"></a></li>
-                    <li><a href="https://www.instagram.com/official_atwosomeplace/" target="_blank"><img src="../assets/images/common/footer_instagram-brands.svg" alt="인스타그램"></a></li>
-                    <li><a href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q" target="_blank"><img src="../assets/images/common/footer_youtube-brands.svg" alt="유튜브"></a></li>
-                    <li><a href="https://play.google.com/store/apps/details?id=com.cj.twosome" target="_blank"><img src="../assets/images/common/footer_sns-app.png" alt="APP"></a></li>
+                    <li><a href="https://www.facebook.com/ATWOSOMEPLACE" target="_blank"><img
+                                src="../assets/images/common/footer_facebook-f-brands.svg" alt="페이스북"></a></li>
+                    <li><a href="https://www.instagram.com/official_atwosomeplace/" target="_blank"><img
+                                src="../assets/images/common/footer_instagram-brands.svg" alt="인스타그램"></a></li>
+                    <li><a href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q" target="_blank"><img
+                                src="../assets/images/common/footer_youtube-brands.svg" alt="유튜브"></a></li>
+                    <li><a href="https://play.google.com/store/apps/details?id=com.cj.twosome" target="_blank"><img
+                                src="../assets/images/common/footer_sns-app.png" alt="APP"></a></li>
                 </ul>
                 <ul class="foot_link d_f">
                     <li><a href="">사이트맵</a></li>
@@ -272,6 +323,7 @@
             </div>
         </footer>
     </div>
-  
+
 </body>
+
 </html>

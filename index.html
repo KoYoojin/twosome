@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> 투썸플레이스 - Premium Dessert Cafe </title>
     <link rel="shortcut icon" href="assets/images/favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script:regular" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,regular,500,700" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/fullpage.css">
     <link rel="stylesheet" href="assets/css/swiper-bundle.css">
@@ -16,8 +15,8 @@
     <script src="assets/js/jquery-1.12.4.min.js"></script>
     <script src="assets/js/fullpage.min.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
-    <script src="assets/js/common.js"></script>
     <script src="assets/js/mouseover.js"></script>
+    <script src="assets/js/common.js"></script>
     <script>
         $(document).ready(function () {
             /*full page 스크립트*/
@@ -31,15 +30,22 @@
                 afterLoad: function (origin, destination, direction) { //본문을 불러오고 나서 스크롤이 끝나면 실행=> fade를 위해 추가됨
                     if (destination.index == 1) { //도착지 인덱스 번호는 0부터 시작
                         $('#cnt2').addClass('on');
-                    } else if (destination.index == 3) {
+                    } else {
+                        $('#cnt2').removeClass('on');
+                    }
+                    if (destination.index == 2) { //도착지 인덱스 번호는 0부터 시작
+                        $('#cnt3').addClass('on');
+                    } else {
+                        $('#cnt3').removeClass('on');
+                    }
+                    if (destination.index == 3 || destination.index == 4) {
                         $('#cnt4').addClass('on');
-                    } else { //#cnt2와 #cnt4가 아니라면 .on을 지워라
-                        $('#cnt2, #cnt4').removeClass('on');
+                    } else {
+                        $('#cnt4, #footer').removeClass('on');
                     }
                 }
             });
 
-            /*swiper 스크립트 , 본문 3에도 있으니까 이름은 swiper1로 수정합니다 */
             const swiper1 = new Swiper('#cnt1 .swiper-container', {
                 direction: 'horizontal',
                 loop: true,
@@ -54,33 +60,61 @@
                     prevEl: '.swiper-button-prev',
                 },
 
-                /* autoplay: {
+                autoplay: {
                     delay: 5000,
                     disableOnInteraction: false,
-                }, */
+                },
             });
 
-            $('.btn_stop').on('click', function () {
+            $('#cnt1 .btn_stop').on('click', function () {
                 $(this).hide().siblings('button').show();
                 swiper1.autoplay.stop();
             });
-            $('.btn_play').on('click', function () {
+            $('#cnt1 .btn_play').on('click', function () {
                 $(this).hide().siblings('button').show();
                 swiper1.autoplay.start();
             });
-            //mouseover시 일어나는 effect : 해당 본문이 보여지면 fade 효과 넣기 위해 fade 되는 대상에 .fade를 추가했어요
-            var $fade = $(".fade");
-            $fade.attr('tabindex', 0);
 
-            //li에 포커스가 가거나 마우스가 진입할 경우 클래스 추가, 포커스와 마우스가 나가면 처음으로 되돌리기
-            $fade.on({
-                'focusin mouseenter': function () {
-                    $(this).addClass("on");
+            const swiper3 = new Swiper('#cnt3 .swiper-container', {
+                direction: 'horizontal',
+                loop: true,
+
+                // pagination이 2개 여서 하나 삭제함
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets', //bullets(기본원형)
+                    clickable: true, //페이지네이션을 클릭해도 슬라이더 이동가능
                 },
-                'focusout mouseleave': function () {
-                    $(this).removeClass("on");
-                }
+
+                // 이전과 다음버튼
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+
+                slidesPerView: 2, //한 화면에 보여지는 슬라이더 개수
+                spaceBetween: 186, //슬라이더 사이 공백
+                centeredSlides: true, //슬라이더가 가운데로
+
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+
             });
+            
+            //★ 자동실행 버튼 추가 스크립트 추가하기
+            $('#cnt3 .btn_stop').on('click', function () {
+                $(this).hide().siblings('button').show();
+                swiper3.autoplay.stop();
+            });
+            $('#cnt3 .btn_play').on('click', function () {
+                $(this).hide().siblings('button').show();
+                swiper3.autoplay.start();
+            });
+
+            var sizeSvg_r = document.querySelector('.svg_r').getTotalLength();
+            console.log(sizeSvg_r); //118.61123657226562 => 119
         });
     </script>
 </head>
@@ -143,6 +177,7 @@
                 </div>
             </div>
         </header>
+
         <div id="container">
             <section class="section" id="cnt1">
                 <h2 class="blind">여름 시즌 신메뉴 출시</h2>
@@ -204,15 +239,27 @@
                         <div class="swiper-pagination p_a"></div>
                         <div class="swiper-button-prev">
                             <span class="blind">이전버튼</span>
+                            <svg>
+                                <circle cx="20" cy="20" r="19" class="svg_r" />
+                            </svg>
                         </div>
                         <div class="swiper-button-next">
                             <span class="blind">다음버튼</span>
+                            <svg>
+                                <circle cx="20" cy="20" r="19" class="svg_r" />
+                            </svg>
                         </div>
                         <button class="btn_stop stop_play" type="button">
                             <span class="blind">일시정지</span>
+                            <svg>
+                                <circle cx="20" cy="20" r="19" class="svg_r" />
+                            </svg>
                         </button>
                         <button class="btn_play stop_play" type="button">
                             <span class="blind">자동재생</span>
+                            <svg>
+                                <circle cx="20" cy="20" r="19" class="svg_r" />
+                            </svg>
                         </button>
                     </div>
                 </div>
@@ -265,13 +312,155 @@
                 </ul>
             </section>
             <section class="section" id="cnt3">
-                <h2 class="tit_top tit"></h2>
+                <h2 class="tit_top tit">브랜드 필름</h2>
+                <div class="film">
+                    <div class="swiper-container"><!-- 컨테이너 높이는 슬라이더 높이와 같음, 이전다음버튼과 컨트롤러는absolute로 슬라이더와 겹쳐있다 -->
+                        <div class="swiper-wrapper d_f">
+                            <!-- Slides -->
+                            <div class="swiper-slide slide1">
+                                <iframe id="ytplayer" type="text/html" width="947" height="504"
+                                    src="https://www.youtube.com/embed/dn4mJYHa4TQ?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer"
+                                    title="투썸플레이스 Winter in my Fantasy 티저"></iframe>
+                            </div>
+                            <div class="swiper-slide slide2">
+                                <iframe id="ytplayer" type="text/html" width="947" height="504"
+                                    src="https://www.youtube.com/embed/y5hePHv6-fs?rel=0&amp;controls=0&amp;showinfo=0&amp;enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer"
+                                    title="투썸플레이스 Winter in my Fantasy 메이킹필름"></iframe>
+                            </div>
+                            <div class="swiper-slide slide3">
+                                <iframe id="ytplayer" type="text/html" width="947" height="504"
+                                    src="https://www.youtube.com/embed/8vMRtiU9638?rel=0&controls=0&showinfo=0&enablejsapi=1&version=3&playerapiid=ytplayer"
+                                    title="투썸플레이스 Winter in my Fantasy"></iframe>
+                            </div>
+                        </div>
+
+                        <!-- 이전, 다음 버튼 : .controller에서 분리 -->
+                        <div class="swiper-button-prev prev_next"></div>
+                        <div class="swiper-button-next prev_next"></div>
+                        <div class="controller">
+                            <div class="swiper-pagination"></div>
+                            <!-- 정지와 실행버튼 -->
+                            <button class="btn_stop stop_play" type="button" title="일시정지"></button><!-- 배경이미지로 넣기 -->
+                            <button class="btn_play stop_play" type="button" title="자동실행"></button>
+                        </div>
+                    </div>
+                </div>
             </section>
-            <section class="section" id="cnt4">Some section</section>
+
+            <section class="section" id="cnt4">
+                <div class="info">
+                    <ul class="d_f">
+                        <li class="tit1 up">
+                            <div class="top">
+                                <h2>새소식</h2>
+                                <p>투썸의 다양한 정보와<br>
+                                    새로운 소식을 전합니다</p>
+                            </div>
+                            <div class="bottom">
+                                <img src="assets/images/main/article4_iF.jpg" alt="if디자인 어워드 2021 수상 패키지 부문 본상 2개 수상">
+                                <p>독일 iF 디자인 어워드 2021 수상</p>
+                                <a href="" class="over">
+                                    <p>자세히 보기</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tit2 down">
+                            <div class="top">
+                                <h2>이벤트</h2>
+                                <p>맛있는 이벤트로<br>
+                                    일상에 작은 즐거움을<br>
+                                    선사합니다</p>
+                            </div>
+                            <div class="bottom">
+                                <img src="assets/images/main/article4_event_coupon.jpg" alt="모바일 투썸 앱 신규가입하면 아메리카노 쿠폰 선착순 증정">
+                                <p>모바일투썸 신규 가입 이벤트</p>
+                                <a href="" class="over">
+                                    <p>자세히 보기</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tit3 up">
+                            <div class="top">
+                                <h2>오픈매장</h2>
+                                <p> 더 많은 즐거움을<br>
+                                    제공하기 위해<br>
+                                    더 많이 찾아가겠습니다</p>
+                            </div>
+                            <div class="bottom">
+                                <img src="assets/images/main/article4_store_suwon.jpg" alt="">
+                                <p>북수원정자타운점</p>
+                                <a href="" class="over">
+                                    <p>자세히 보기</p>
+                                </a>
+                            </div>
+                        </li>
+                        <li class="tit4 down">
+                            <div class="top">
+                                <h2>모바일투썸</h2>
+                                <p>모바일 투썸으로<br>
+                                    더 편리하고 새로워진<br>
+                                    투썸 플레이스를 만나보세요</p>
+                            </div>
+                            <div class="bottom">
+                                <img src="assets/images/main/article4_mobileTS.jpg" alt="기다림은 짧게 비대면으로 안전하게">
+                                <p>내 손 안의 투썸플레이스</p>
+                                <a href="" class="over">
+                                    <p>자세히 보기</p>
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            
             <div class="section fp-auto-height">
-                <footer id="footer"></footer>
+                <footer id="footer">
+                    <div class="foot_inner">
+                        <ul class="contact d_f">
+                            <li><img src="assets/images/common/footer_headset-solid.svg" alt="고객센터">1577-4410</li>
+                            <li><img src="assets/images/common/footer_fax.svg" alt="팩스">02-2058-6777</li>
+                            <li><img src="assets/images/common/footer_envelope.svg" alt="대표이메일"><a
+                                    href="">helpmaster@twosome.co.kr</a></li>
+                        </ul>
+                        <ul class="sns_right d_f">
+                            <li><a href="https://www.facebook.com/ATWOSOMEPLACE" target="_blank"><img
+                                        src="assets/images/common/footer_facebook-f-brands.svg" alt="페이스북"></a></li>
+                            <li><a href="https://www.instagram.com/official_atwosomeplace/" target="_blank"><img
+                                        src="assets/images/common/footer_instagram-brands.svg" alt="인스타그램"></a></li>
+                            <li><a href="https://www.youtube.com/channel/UCDjdk0ufvcvV08hAm_vF06Q" target="_blank"><img
+                                        src="assets/images/common/footer_youtube-brands.svg" alt="유튜브"></a></li>
+                            <li><a href="https://play.google.com/store/apps/details?id=com.cj.twosome"
+                                    target="_blank"><img src="assets/images/common/footer_sns-app.png" alt="APP"></a>
+                            </li>
+                        </ul>
+                        <ul class="foot_link d_f">
+                            <li><a href="">사이트맵</a></li>
+                            <li><a href="">리크루트</a></li>
+                            <li><a href="">이용약관</a></li>
+                            <li><a href="">개인정보처리방침</a></li>
+                            <li><a href="">위치기반서비스 이용약관</a></li>
+                            <li><a href="">이메일 무단수집거부</a></li>
+                            <li><a href="">법적고지</a></li>
+                        </ul>
+                        <div class="address">
+                            <address>
+                                <span>서울특별시 중구 을지로 170, 8층(을지로4가, 을지로트윈타워) 투썸플레이스(주)</span>
+                                <span>대표이사 : 이영상</span>
+                                <span>개인정보보호책임자 : 장재호</span>
+                                <span>사업자등록번호 : 404-86-01054</span>
+                            </address>
+                            <p>
+                                <span>통신판매업종신고증 : 제 2018-서울중구-0353호</span>
+                                <span>Copyright ⓒ 2020 A TWOSOME PLACE CO. LTD. ALL RIGHTS RESERVED.</span>
+                            </p>
+                        </div>
+                        <a href="#header" class="btn_top">TOP</a>
+                    </div>
+                </footer>
             </div>
         </div>
+
+
     </div>
 </body>
 
