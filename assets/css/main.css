@@ -31,7 +31,7 @@
     0%{transform: translateY(-10px);}
     100%{transform: translateY(0);}
 }
-.tit_top{padding: 55px 0 50px;}
+.tit_top{padding: 60px 0 50px;color: #fff;opacity: .9;}
 .tit{font-size: 24px;letter-spacing: 7.8px;text-align: center;}
 
 /*fullpage 인디케이터 버튼(#fp-nav)*/
@@ -83,20 +83,24 @@
 #cnt1 .controller .btn_play:hover, #cnt1 .controller .btn_play:focus{background-position-x: -196.5px;}
 
 /*#cnt2*/
+#cnt2{color: #fff;background: url("../images/main/cnt2_bg.jpg") no-repeat;background-size: cover;}
+#cnt2 h2, #cnt2 ul li{opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;}
+#cnt2 h2{position: relative;top: 50px;}
+#cnt2.on h2{opacity: 0.9;top: 0;}
 #cnt2 ul{width: 1200px;margin: 0 auto;text-align: center;}
-#cnt2 ul li{position: relative;float: left;width: 340px;height: 560px;background: no-repeat;opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;}
+#cnt2 ul li{position: relative;float: left;width: 340px;height: 560px;background: no-repeat;}
 #cnt2 ul li:nth-child(odd){top: 100px;}
 #cnt2 ul li:nth-child(2){top: -100px;}
 #cnt2.on ul li{opacity: 1;top: 0;}
 #cnt2 ul li + li{margin-left: 90px;}
-#cnt2 ul .store1{background-image: url("../images/main/store_parkone.jpg");}
-#cnt2 ul .store2{background-image: url("../images/main/store_yeonsaero.jpg");background-position-y: bottom;margin-top: 50px;-webkit-transition-delay: 0.2s;-moz-transition-delay: 0.2s;-o-transition-delay: 0.2s;transition-delay: 0.2s;}
-#cnt2 ul .store3{background-image: url("../images/main/store-nonhyun.jpg");-webkit-transition-delay: 0.4s;-moz-transition-delay: 0.4s;-o-transition-delay: 0.4s;transition-delay: 0.4s;}
+#cnt2 ul .store1{background-image: url("../images/main/store_parkone.jpg");-webkit-transition-delay: 0.3s;-moz-transition-delay: 0.3s;-o-transition-delay: 0.3s;transition-delay: 0.3s;}
+#cnt2 ul .store2{background-image: url("../images/main/store_yeonsaero.jpg");background-position-y: bottom;margin-top: 50px;-webkit-transition-delay: 0.6s;-moz-transition-delay: 0.6s;-o-transition-delay: 0.6s;transition-delay: 0.6s;}
+#cnt2 ul .store3{background-image: url("../images/main/store-nonhyun.jpg");-webkit-transition-delay: 0.9s;-moz-transition-delay: 0.9s;-o-transition-delay: 0.9s;transition-delay: 0.9s;}
 #cnt2 ul li .store_name{width: 100%;position: absolute;}
 #cnt2 ul li:nth-child(odd) .store_name{bottom: 0;}
-#cnt2 ul li .store_name strong{display: block;color: #666;font-size: 16px;letter-spacing: 0.8px;font-weight: 400;margin-bottom: 17px;}
-#cnt2 ul li .store_name h3{color: #333;font-size: 34px;letter-spacing: 2.55px;}
-#cnt2 ul li .over{position: absolute;width: 100%;height: 460px;color: #fff;overflow: hidden;box-shadow: 2px 3px 6px rgba(128, 128, 128, .3);}
+#cnt2 ul li .store_name strong{display: block;opacity: 0.7;font-size: 16px;letter-spacing: 0.8px;font-weight: 400;margin-bottom: 17px;}
+#cnt2 ul li .store_name h3{font-weight: 500;font-size: 34px;letter-spacing: 2.55px;}
+#cnt2 ul li .over{position: absolute;width: 100%;height: 460px;overflow: hidden;box-shadow: 2px 3px 5px rgba(128, 128, 128, .3);}
 #cnt2 ul li:nth-child(2) .over{bottom: 0;}
 #cnt2 ul li .over .over_bg{width: 100%;height: 100%;background: rgba(0, 0, 0, .7);-webkit-transition: margin-top .5s;-moz-transition: margin-top .5s;-o-transition: margin-top .5s;transition: margin-top .5s;}
 #cnt2 ul li:nth-child(odd) .over .over_bg{margin-top: 460px;}
