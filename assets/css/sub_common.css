@@ -20,7 +20,7 @@
 .fade .fade_right{-webkit-transform: translate(-100px, 0);-moz-transform: translate(-100px, 0);-o-transform: translate(-100px, 0);transform: translate(-100px, 0);}
 .fade .fade_up{-webkit-transform: translate(0, 100px);-moz-transform: translate(0, 100px);-o-transform: translate(0, 100px);transform: translate(0, 100px);-webkit-transition-duration: 0.5s;-moz-transition-duration: 0.5s;-o-transition-duration: 0.5s;transition-duration: 0.5s;}
 .fade.on .fade_left, .fade.on .fade_right, .fade.on .fade_up{opacity: 1;-webkit-transform: translate(0,0);-moz-transform: translate(0,0);-o-transform: translate(0,0);transform: translate(0,0);}
-.fade .delay-3{-webkit-transition-delay: 0.3s;-moz-transition-delay: 0.3s;-o-transition-delay: 0.3s;transition-delay: 0.3s;}
-.fade .delay-5{-webkit-transition-delay: 0.5s;-moz-transition-delay: 0.5s;-o-transition-delay: 0.5s;transition-delay: 0.5s;}
-.fade .delay-7{-webkit-transition-delay: 0.7s;-moz-transition-delay: 0.7s;-o-transition-delay: 0.7s;transition-delay: 0.7s;}
-.fade .slow{-webkit-transition-duration: 2s;-moz-transition-duration: 2s;-o-transition-duration: 2s;transition-duration: 2s;}
+.delay-3{-webkit-transition-delay: 0.3s;-moz-transition-delay: 0.3s;-o-transition-delay: 0.3s;transition-delay: 0.3s;}
+.delay-5{-webkit-transition-delay: 0.5s;-moz-transition-delay: 0.5s;-o-transition-delay: 0.5s;transition-delay: 0.5s;}
+.delay-7{-webkit-transition-delay: 0.7s;-moz-transition-delay: 0.7s;-o-transition-delay: 0.7s;transition-delay: 0.7s;}
+.slow{-webkit-transition-duration: 2s;-moz-transition-duration: 2s;-o-transition-duration: 2s;transition-duration: 2s;}
