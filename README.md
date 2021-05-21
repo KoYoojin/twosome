@@ -13,4 +13,4 @@
 
 5.Navigation 구성: twosome, menu, store, membership, news<br>
 
-6.퍼블리싱 담당: #header, main 본문1/본문2, menu 페이지 title 영역, news 페이지 전체<br>
+6.퍼블리싱 담당: #header, main 본문1/본문2, menu 페이지 title 영역, news 페이지 전체, 서브페이지 하단 배너<br>
