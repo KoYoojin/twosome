@@ -65,7 +65,7 @@
 #cnt1 .swiper-wrapper .slide5 .img_txt p{margin-left: -2px;}
 #cnt1 .swiper-wrapper .slide6 .img_txt p{margin-left: 7px;}
 #cnt1 .swiper-wrapper .swiper-slide .img_txt p:nth-child(2){font-size: 20.5px;letter-spacing: 0.21px;text-align: center;}
-#cnt1 .swiper-slide .img_txt .ice{position: absolute;right: 35px;top: 0; font-family: "Nanum Pen Script";font-size: 24px;color: #fff;background: #0796f1;border-radius: 50%;width: 70px;height: 70px; line-height: 18px; vertical-align: middle;text-align: center; margin-top: 45px;}
+#cnt1 .swiper-slide .img_txt .ice{position: absolute;right: 35px;top: 0; font-family: "Nanum Pen Script";font-size: 24px;color: #fff;background: #0796f1;border-radius: 50%;width: 70px;height: 70px; line-height: 18px; vertical-align: middle;text-align: center; margin-top: 45px;box-shadow: 1px 2px 5px rgba(0, 0, 0, .2);}
 
  /* 이전다음버튼 */
 #cnt1 .swiper-container .swiper-button-prev, #cnt1 .swiper-container .swiper-button-next{background: no-repeat center; width: 50px;height: 50px;}
