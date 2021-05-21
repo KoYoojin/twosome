@@ -186,7 +186,7 @@
 #cnt4 ul .tit4 h2::after{background-image: url("../images/main/cnt4_mobileTS_wht.png");width: 48px;}
 #cnt4 ul li.move h2::after{-webkit-animation: moveY .6s linear 4 alternate-reverse backwards;-moz-animation: moveY .6s linear 4 alternate-reverse backwards;-o-animation: moveY .6s linear 4 alternate-reverse backwards;animation: moveY .6s linear 4 alternate-reverse backwards;}
 
-#cnt4 ul li .top p{position: relative;margin: 20px 0 56px 0;color: rgb(204, 200, 200);letter-spacing: -0.18px; /* background: white; */}
+#cnt4 ul li .top p{position: relative;margin: 20px 0 56px 0;color: rgb(204, 200, 200);line-height: 26px;letter-spacing: -0.18px; /* background: white; */}
 #cnt4 ul li .top p::after{content: "";position: absolute;width: 30px;height: 1px;bottom: -28px;left: 0;background: #aaa;}
 #cnt4 ul li .bottom img, #cnt4 ul li .bottom .over{width: 227px;height: 227px;border-radius: 15px;}
 #cnt4 ul li .bottom p{font-size: 14px;margin-top: 12.5px;letter-spacing: -0.14px;}
