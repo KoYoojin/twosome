@@ -62,6 +62,7 @@
 #fp-nav ul li:hover .fp-tooltip::after, #fp-nav.fp-show-active a.active + .fp-tooltip::after{content: "";position: absolute;right: -6px;top: 7px;border-left: 6px solid #d60037;border-top: 4px solid transparent;border-bottom: 4px solid transparent;}
 
 /*#cnt1*/
+#cnt1::after{content: "";position: absolute;width: 22px;height: 27px;background: url("../images/icon/scroll.png") no-repeat;background-size: 100%;top: 94vh;left: calc(50% - 12px);z-index: 1;-webkit-animation: moveY 1s linear infinite alternate-reverse;-moz-animation: moveY 1s linear infinite alternate-reverse;-o-animation: moveY 1s linear infinite alternate-reverse;animation: moveY 1s linear infinite alternate-reverse;}
 #cnt1 .swiper-container{height: 100vh;}
 #cnt1 .swiper-container .swiper-slide{position: relative;background: no-repeat center;background-size: cover;}
 #cnt1 .swiper-container .slide1{background-image: url("../images/main/new_latte_menuText.jpg");}
