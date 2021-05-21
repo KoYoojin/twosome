@@ -116,13 +116,13 @@
             var sizeSvg_r = document.querySelector('.svg_r').getTotalLength();
             console.log(sizeSvg_r); //118.61123657226562 => 119
 
-            var $cnt4_moveY = $("#cnt4 ul li a");
+            var $cnt4_moveY = $('#cnt4 ul li a');
         	$cnt4_moveY.on({
 		     'focusin mouseenter' : function () {
-			    $(this).parents("li").addClass("move");
+			    $(this).parents('li').addClass('move');
 	    	    },
 		      'focusout mouseleave' : function () {
-		    	$(this).parents("li").removeClass("move");
+		    	$(this).parents('li').removeClass('move');
 	        	}
         	}); 
         });
