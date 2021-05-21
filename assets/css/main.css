@@ -180,10 +180,10 @@
 
 #cnt4 ul li h2{position: relative;font-size: 34px;letter-spacing: 2.55px;}
 #cnt4 ul li h2::after{content: "";position: absolute;width: 71px;height: 70px;left: 0;top: -90px; background: no-repeat;}
-#cnt4 ul .tit1 h2::after{background: url("../images/main/cnt4_news_wht.png");}
-#cnt4 ul .tit2 h2::after{background: url("../images/main/cnt4_event_wht.png");}
-#cnt4 ul .tit3 h2::after{background: url("../images/main/cnt4_store_wht.png");}
-#cnt4 ul .tit4 h2::after{background: url("../images/main/cnt4_mobileTS_wht.png");width: 48px;}
+#cnt4 ul .tit1 h2::after{background-image: url("../images/main/cnt4_news_wht.png");}
+#cnt4 ul .tit2 h2::after{background-image: url("../images/main/cnt4_event_wht.png");}
+#cnt4 ul .tit3 h2::after{background-image: url("../images/main/cnt4_store_wht.png");}
+#cnt4 ul .tit4 h2::after{background-image: url("../images/main/cnt4_mobileTS_wht.png");width: 48px;}
 #cnt4 ul li.move h2::after{-webkit-animation: moveY .6s linear 4 alternate-reverse backwards;-moz-animation: moveY .6s linear 4 alternate-reverse backwards;-o-animation: moveY .6s linear 4 alternate-reverse backwards;animation: moveY .6s linear 4 alternate-reverse backwards;}
 
 #cnt4 ul li .top p{position: relative;margin: 20px 0 56px 0;color: rgb(204, 200, 200);letter-spacing: -0.18px; /* background: white; */}
