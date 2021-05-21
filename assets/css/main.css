@@ -157,7 +157,7 @@
 /* #cnt3 .controller > div, #cnt3 .controller .stop_play{position: absolute;background: no-repeat;} */
 #cnt3 .controller{position: absolute;bottom: -70px;left: 50%;width: 456px;height: 17px;transform: translateX(-50%);/* background: yellow; */}
 /* 2) pagination 은 swiper.css에서 처음부터 absolute 였답니다 */
-.swiper-pagination{top: -10px;left: 0;height: 3px;}/* top: -10px;을 올려주어야 라인들이 보여지네요.. 이건 이상해요 좀 */
+.swiper-pagination{top: -7px;left: 0;height: 3px;}/* top: -10px;을 올려주어야 라인들이 보여지네요.. 이건 이상해요 좀 */
 .swiper-pagination span{width: 124px;margin-right: 22px;}
 
 
