@@ -53,7 +53,7 @@
 
 /*fullpage 인디케이터 버튼(#fp-nav)*/
 #fp-nav.fp-right{right: 150px;}
-#fp-nav ul li:last-child{width: 1px;height: 1;border: none;overflow: hidden;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
+#fp-nav ul li:last-child{width: 1px;height: 1px;border: none;overflow: hidden;position: absolute;clip: rect(1px, 1px, 1px, 1px);clip-path: inset(50%);}
 #fp-nav ul li + li{margin-top: 20px;}
 #fp-nav ul li a span, .fp-slidesNav ul li a span, #fp-nav ul li:hover a span{width: 6px;height: 6px;border: 2px solid #aaa;background: none;margin: -5px 0 0 -5px;}
 #fp-nav ul li a.active span, #fp-nav ul li:hover a.active span{width: 12px;height: 12px;background: #d60037;border: none;margin: -6px 0 0 -6px;}
@@ -158,8 +158,8 @@
 /* #cnt3 .controller > div, #cnt3 .controller .stop_play{position: absolute;background: no-repeat;} */
 #cnt3 .controller{position: absolute;bottom: -70px;left: 50%;width: 456px;height: 17px;transform: translateX(-50%);/* background: yellow; */}
 /* 2) pagination 은 swiper.css에서 처음부터 absolute 였답니다 */
-.swiper-pagination{top: -7px;left: 0;height: 3px;}/* top: -10px;을 올려주어야 라인들이 보여지네요.. 이건 이상해요 좀 */
-.swiper-pagination span{width: 124px;margin-right: 22px;}
+#cnt3 .swiper-pagination{top: -7px;left: 0;height: 3px;}/* top: -10px;을 올려주어야 라인들이 보여지네요.. 이건 이상해요 좀 */
+#cnt3 .swiper-pagination span{width: 124px;margin-right: 22px;}
 
 
 /* 4) 정지실행버튼 */
