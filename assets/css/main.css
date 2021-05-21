@@ -47,6 +47,42 @@
     0%{transform: translateY(-10px);}
     100%{transform: translateY(0);}
 }
+@-webkit-keyframes handOver {
+    0%{bottom: 55px;right: 270px;}
+    30%{bottom: 120px;right: 370px;opacity: 1;}
+    40%{opacity: 0.7;}
+    50%{opacity: 1;}
+    60%{opacity: .7;}
+    70%{opacity: 1;}
+    100%{bottom: 120px;right: 370px;opacity: 0;}
+}
+@-moz-keyframes handOver {
+    0%{bottom: 55px;right: 270px;}
+    30%{bottom: 120px;right: 370px;opacity: 1;}
+    40%{opacity: 0.7;}
+    50%{opacity: 1;}
+    60%{opacity: .7;}
+    70%{opacity: 1;}
+    100%{bottom: 120px;right: 370px;opacity: 0;}
+}
+@-o-keyframes handOver {
+    0%{bottom: 55px;right: 270px;}
+    30%{bottom: 120px;right: 370px;opacity: 1;}
+    40%{opacity: 0.7;}
+    50%{opacity: 1;}
+    60%{opacity: .7;}
+    70%{opacity: 1;}
+    100%{bottom: 120px;right: 370px;opacity: 0;}
+}
+@keyframes handOver {
+    0%{bottom: 55px;right: 270px;}
+    30%{bottom: 120px;right: 370px;opacity: 1;}
+    40%{opacity: 0.7;}
+    50%{opacity: 1;}
+    60%{opacity: .7;}
+    70%{opacity: 1;}
+    100%{bottom: 120px;right: 370px;opacity: 0;}
+}
 
 .tit_top{padding-top: 90px;}
 .tit{font-size: 24px;letter-spacing: 7.8px;text-align: center;}
@@ -107,10 +143,12 @@
 
 /*#cnt2*/
 #cnt2{color: #fff;background: url("../images/main/cnt2_bg.jpg") no-repeat;background-size: cover;color: #fff;}
-#cnt2 h2, #cnt2 ul li{opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;}
+#cnt2 h2, #cnt2 ul li, #cnt2 ul::after{opacity: 0;-webkit-transition: all 1s;-moz-transition: all 1s;-o-transition: all 1s;transition: all 1s;}
 #cnt2 h2{position: relative;opacity: 0;top: 50px;padding-bottom: 50px;}
 #cnt2.on h2{opacity: 0.9;top: 0;}
 #cnt2 ul{width: 1200px;margin: 0 auto;text-align: center;}
+#cnt2 ul::before{content: "";position: absolute;bottom: 55px;right: 270px;width: 57px;height: 60px;background: url("../images/icon/hand_rotate_wht.png");opacity: 0;;-webkit-transition-delay: 1.5s;-moz-transition-delay: 1.5s;-o-transition-delay: 1.5s;transition-delay: 1.5s;}
+#cnt2.on ul::before{opacity: 1;-webkit-animation: handOver 3s 2s 1 forwards;-moz-animation: handOver 3s 2s 1 forwards;-o-animation: handOver 3s 2s 1 forwards;animation: handOver 3s 2s 1 forwards;}
 #cnt2 ul li{position: relative;float: left;width: 340px;height: 560px;background: no-repeat;}
 #cnt2 ul li:nth-child(odd){top: 100px;}
 #cnt2 ul li:nth-child(2){top: -100px;}

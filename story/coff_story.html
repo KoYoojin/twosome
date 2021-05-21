@@ -33,11 +33,9 @@
 
                 slidesPerView: 1, //한 화면에 보여지는 슬라이더 개수
                 spaceBetween: 200, //슬라이더 사이 공백
+                speed: 1000,
             });
         });
-
-
-        
     </script>
 
 
@@ -64,18 +62,18 @@
                         <h2 class="blind">주메뉴</h2>
                         <ul class="d_f">
                             <li>
-                                <a href="coff_story.html">TWOSOME</a>
+                                <a href="../story/coff_story.html">TWOSOME</a>
                                 <ul>
-                                    <li><a href="coff_story.html">투썸 히스토리</a></li>
-                                    <li><a href="coff_story.html">커피 스토리</a></li>
+                                    <li><a href="../story/coff_story.html">투썸 히스토리</a></li>
+                                    <li><a href="../story/coff_story.html">커피 스토리</a></li>
                                 </ul>
                             </li>
                             <li>
-                                <a href="../menu/drink.html">MENU</a>
+                                <a href="drink.html">MENU</a>
                                 <ul>
-                                    <li><a href="../menu/drink.html">음료</a></li>
-                                    <li><a href="../menu/drink.html">푸드</a></li>
-                                    <li><a href="../menu/drink.html">상품</a></li>
+                                    <li><a href="drink.html">음료</a></li>
+                                    <li><a href="drink.html">푸드</a></li>
+                                    <li><a href="drink.html">상품</a></li>
                                 </ul>
                             </li>
                             <li>
@@ -156,26 +154,26 @@
                             <!-- Additional required wrapper 슬라이더 본문 그룹 -->
                             <div class="swiper-wrapper">
                                 <!-- Slides -->
-                                <div class="swiper-slide slide1">
-                                    <div class="tabpanel tabpanel1">
-                                        <p class="origin">
+                                <div class="swiper-slide slide1 fade">
+                                    <div class="slide_cnt slide_cnt1">
+                                        <p class="origin fade_up">
                                             <span>#콜롬비아</span>
                                             <span>#브라질</span>
                                             <span>#에티오피아</span>
                                             <span>#과테말라</span>
                                         </p>
-                                        <p class="tab_tit">
+                                        <p class="tab_tit fade_up">
                                             <span>BLACK GROUND</span>
                                             <span>블랙그라운드</span>
                                         </p>
-                                        <p class="quot d_f">
+                                        <p class="quot d_f fade_up delay-3">
                                             <span>&quot;</span>
                                             <span>&quot;</span>
                                         </p>
-                                        <h4>묵직하고 스모키한 첫인상과 달콤 쌉싸름한 여운이 매력적인<br>
+                                        <h4 class="fade_up delay-3">묵직하고 스모키한 첫인상과 달콤 쌉싸름한 여운이 매력적인<br>
                                             다크로스팅 블렌드
                                         </h4>
-                                        <div class="bean d_f">
+                                        <div class="bean d_f fade_up delay-5">
                                             <div class="bk_left">
                                                 <p class="yellow">블랙그라운드 원두 평가</p>
                                                 <p>
@@ -205,32 +203,33 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="recom">나를 둘러싼 주변 소음으로부터 잠시 떨어져 깊은 사색과<br>
-                                            여유를 즐기고 싶은 분들에게 '블랙그라운드'를 추천드립니다.</p>
+                                        <div class="recom fade_up delay-7">
+                                            <p>나를 둘러싼 주변 소음으로부터 잠시 떨어져 깊은 사색과 <br>여유를 즐기고 싶은 분들에게 '블랙그라운드'를 추천드립니다.</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="swiper-slide slide2">
-                                    <div class="tabpanel tabpanel2">
-                                        <p class="origin">
+                                <div class="swiper-slide slide2 fade">
+                                    <div class="slide_cnt slide_cnt2">
+                                        <p class="origin fade_up">
                                             <span>#콜롬비아</span>
                                             <span>#브라질</span>
                                             <span>#에티오피아</span>
-                                            <span>#과테말라</span>
                                         </p>
-                                        <p class="tab_tit">
-                                            <span>BLACK GROUND</span>
-                                            <span>블랙그라운드</span>
+                                        <p class="tab_tit fade_up">
+                                            <span>AROMA NOTE</span>
+                                            <span>아로마노트</span>
                                         </p>
-                                        <p class="quot d_f">
+                                        <p class="quot d_f fade_up delay-3">
                                             <span>&quot;</span>
                                             <span>&quot;</span>
                                         </p>
-                                        <h4>묵직하고 스모키한 첫인상과 달콤 쌉싸름한 여운이 매력적인<br>
-                                            다크로스팅 블렌드
+                                        <h4 class="fade_up delay-3">플로럴한 화사함과 열대과일의 새콤달콤함에<br>
+                                            부드러운 바디감이 조화롭게 어우러져<br>
+                                            누구나 기분 좋게 즐길 수 있는 스페셜티 커피
                                         </h4>
-                                        <div class="bean d_f">
+                                        <div class="bean d_f fade_up delay-5">
                                             <div class="bk_left">
-                                                <p class="yellow">블랙그라운드 원두 평가</p>
+                                                <p class="yellow">아로마노트 원두 평가</p>
                                                 <p>
                                                     <span>산미</span>
                                                     <span class="number" aria-label="20%">
@@ -250,24 +249,45 @@
                                                 </p>
                                             </div>
                                             <div class="bk_right">
-                                                <p class="yellow">블랙그라운드 원두 향미</p>
+                                                <p class="yellow">아로마노트 원두 향미</p>
                                                 <div class="p_l">
-                                                    <p>> Full-body</p>
-                                                    <p>> Nutty</p>
-                                                    <p>> Chocolate</p>
+                                                    <p>> Berry-like</p>
+                                                    <p>> Juicy</p>
+                                                    <p>> Floral</p>
                                                 </div>
                                             </div>
                                         </div>
-                                        <p class="recom">나를 둘러싼 주변 소음으로부터 잠시 떨어져 깊은 사색과<br>
-                                            여유를 즐기고 싶은 분들에게 '블랙그라운드'를 추천드립니다.</p>
+                                        <div class="recom fade_up delay-7">
+                                            <p>꽃잎을 품은 산들바람처럼 가볍고 산뜻한 커피로 지금의 기분을 남기고 싶다면, <br>한 모금 머금는 순간 입가에 잔잔한 미소를 띄우게 될 '아로마노트'를 추천드립니다.</p>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="swiper-button-prev prev_next">
+                                <svg class="circle prev">
+                                    <defs>
+                                        <linearGradient id="myGradient1" x1="100%" y1="0" x2="0" y2="0">
+                                          <stop offset="0%" stop-color="#a9041a" /><!-- red -->
+                                          <stop offset="100%" stop-color="#da5d6d" /><!-- blue -->
+                                        </linearGradient>
+                                      </defs>
+                                      <path d="M 48 0 H 48 V 105 L 48 48"></path>
+                                      <circle cx="50" cy="50" r="45" stroke="url('#myGradient1')" /><!-- 테두리 4 -->
+                                </svg>
                                 <p>BLACK<br>
                                     GROUND</p>
                             </div>
                             <div class="swiper-button-next prev_next">
+                                <svg class="circle next">
+                                    <defs>
+                                        <linearGradient id="myGradient2" x1="100%" y1="0" x2="0" y2="0">
+                                          <stop offset="0%" stop-color="#da5d6d" /><!-- red -->
+                                          <stop offset="100%" stop-color="#a9041a" /><!-- blue -->
+                                        </linearGradient>
+                                      </defs>
+                                      <path d="M 48 0 H 48 V 105 L 48 48"></path>
+                                      <circle cx="50" cy="50" r="45" stroke="url('#myGradient2')" /><!-- 테두리 4 -->
+                                </svg>
                                 <p>AROMA<br>
                                     NOTE</p>
                             </div>
